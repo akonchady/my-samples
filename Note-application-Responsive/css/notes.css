@@ -1,0 +1,330 @@
+body {
+	overflow-x: hidden;
+}
+.banner-image {
+	background: center url("../img/background.jpg") no-repeat ;
+	background-size: cover;
+	width: 100%;
+	height: 370px;
+	text-align: center;
+	color: #fff;
+}
+.note-entry {
+	width: 350px;
+	margin:auto;
+	font-family: 'Roboto', sans-serif;
+	overflow: hidden;
+}
+.note-entry  input, .note-meta input {
+	display: block;
+	width: 100%;
+	height: 35px;
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;;
+	padding: 5px;
+}
+.note-entry  textarea, .note-meta textarea {
+	display: block;
+	width: 100%;
+	height: 115px;
+	margin-top: 15px;
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+	padding: 5px;
+}
+.submit-button {
+	width: 95%;
+	margin: auto;
+	margin-top: 15px;
+	cursor: pointer;
+	padding: 7px;
+	font-weight: bold;
+	background-color: #2FDBA3;
+	border: 3px solid #2FDBA3;
+	letter-spacing: 2px;
+	color: #083C3B;
+}
+.search-notes-container {
+	width: 75%;
+	margin: auto;
+}
+.banner-title {
+	overflow: hidden;
+}
+.banner-title h2{
+	font-family: 'Playball', cursive;
+	font-size: 48px;
+	line-height: 20%;	
+	margin-top: 35px;
+}
+.banner-info{
+	font-family: 'Roboto', sans-serif;
+	margin-top: 20px;
+}
+.note-container {
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+	margin-top: 20px;
+	border-bottom: 1px dotted Gray;
+	padding-bottom: 10px;
+}
+.note-img {
+	width: 90px;
+	height: 16%;
+	float: left;
+	min-height: 90px;
+}
+.img {
+	width: 90px;
+	height: 90px;
+	border-radius: 45px;
+	-webkit-border-radius: 45px;
+	-moz-border-radius: 45px;
+
+	background: url("../img/laptop.png") no-repeat;
+	background-size: contain;
+}
+.note-meta {
+	width: 60%;
+	float: left;
+	padding-right: 10px;
+	padding-left: 10px;
+	overflow: hidden;
+	word-wrap: break-word;
+}
+.note-actions {
+	width: 20%;
+	float: left;
+	text-align: center;
+	letter-spacing: 2px;
+}
+.note-actions>div {
+	padding: 5px 7px;
+	margin-right: 10px;
+	width: 60px;
+	float: left;
+	color: #083C3B;
+	font-weight: bold;
+	border-radius: 6px;
+}
+.search-notes {
+	width: 100%;
+	margin-top: 20px;
+}
+.search-box {
+	display: block;
+	width: 100%;
+	height: 35px;
+	font-size: 13px;
+	font-family: monospace;
+	padding: 5px;
+	padding-right: 30px;
+}
+.search-box::-ms-clear {
+    display: none;
+}
+.edit-save {
+	background-color: rgba(47,219,163,1.0);
+}
+.edit-save:hover {
+	background-color: rgba(47,219,163,0.8);
+	cursor: pointer;
+}
+.delete-cancel {
+	background-color: rgba(255,103,96,1.0);
+}
+.delete-cancel:hover {
+	background-color: rgba(255,103,96,0.8);
+	cursor: pointer;
+}
+.cancel-icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: -25px;
+	float: right;
+	padding-right: 5px;
+	background: url("../img/cancel-icon.png") no-repeat 0px 0px;
+	background-size: contain;
+	cursor: pointer;
+}
+.bold {
+	font-weight: bold;
+}
+.note-meta-title {
+	font-size: 17px;
+	font-family: 'Roboto', sans-serif;
+}
+.note-meta-desc {
+	margin-top: 7px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+.message {
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-weight: bold;
+	font-family: font-family: 'Roboto', sans-serif;
+	text-align: center;
+
+}
+.footer {
+	width: 100%;
+	background-color: #236796;
+	text-align: center;
+	margin-top: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 13px;
+	height: 20px;
+	padding: 5px;
+}
+.footer>div {
+	width: 75%;
+	margin: auto;
+	color: #fff;
+}
+
+/*Media queries - To make the page responsive*/
+@media all and (max-width: 280px) {
+	.search-notes-container {
+		width: 100%;
+	}
+	.banner-title h2 {
+		font-size: 30px;
+		margin-top: 25px;
+		line-height: 18px;
+	}
+	.note-entry {
+		width: 200px;
+	}
+	.note-meta {
+		width: 45%;
+	}
+	.note-actions {
+		clear: both;
+		width: 100%;
+		padding-left: 120px;
+		margin: auto;
+	}
+	.edit-save {
+		margin-top: 5px;
+	}
+	.delete-cancel {
+		clear: both;
+		margin-top: 10px;
+	}
+	.footer {
+		font-size: 10px;
+	}
+}
+
+@media all and (min-width: 281px) and (max-width:320px) {
+	.banner-info {
+		font-size: 13px;
+	}
+	.banner-title h2 {
+		font-size: 30px;
+		margin-top: 25px;
+		line-height: 30px;
+	}
+	.search-notes-container {
+		width: 100%;
+	}
+	.note-meta {
+		width: 50%;
+		padding-bottom: 10px;
+	}
+	.note-actions {
+		width: 100%;
+		padding-left: 90px;
+		margin: auto;
+	}
+	.footer {
+		font-size: 10px;
+	}
+	.note-entry {
+		width: 75%;
+	}
+}
+
+@media all and (min-width: 321px) and (max-width:600px) {
+	.banner-title h2 {
+		font-size: 35px;
+		margin-top: 25px;
+		line-height: 30px;
+	}
+	.note-entry {
+		width: 75%;
+		max-width: 350px;
+	}
+	.search-notes-container {
+		width: 95%;
+	}
+	.note-meta {
+		width: 59%;
+	}
+	.note-actions {
+		width: 100%;
+		padding-left: 100px;
+		margin-top: 10px;
+	}
+	.footer {
+		font-size: 10px;
+	}
+}
+
+@media all and (min-width: 601px) and (max-width: 960px) {
+	.search-notes-container {
+		width: 95%;
+	}
+	.note-meta {
+		width: 75%;
+	}
+
+	.note-actions {
+		width: 100%;
+		padding-left: 100px;
+		margin-top: 10px;
+	}
+}
+
+@media (min-width:961px) and (max-width: 1024px) {
+	.note-meta {
+		width: 70%;
+	}
+	.note-actions {
+		width: 10%;
+	}
+	.delete-cancel {
+		margin-top: 10px;
+	}
+}
+
+@media (min-width:1025px) and (max-width: 1280px) {
+	.note-meta {
+		width: 75%;
+	}
+	.note-actions {
+		width: 5%;
+	}
+	.delete-cancel {
+		margin-top: 10px;
+	}
+}
+
+@media (min-width:1281px) {
+	.note-meta {
+		width: 80%;
+	}
+	.note-actions {
+		width: 5%;
+	}
+	.note-actions>div {
+		clear: both;
+	}
+	.delete-cancel {
+		margin-top: 10px;
+	}
+}
