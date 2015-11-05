@@ -1,0 +1,21 @@
+{
+  "name": "shaadi-hackerearth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shaadi.com",
+    "nodejs"
+  ],
+  "author": "Adarsh Konchady",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.8.1",
+    "express": "~4.9.0",
+    "mysql": "git://github.com/felixge/node-mysql",
+    "serve-favicon": "^2.2.0"
+  }
+}
