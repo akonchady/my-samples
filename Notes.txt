@@ -87,7 +87,7 @@ Notes :
 
 5. Functions modifying the array itself:
 	a. reverse()
-	b.
+	b. splice()
 
 6. Reverse string function:
 	String.prototype.reverse = function () {
