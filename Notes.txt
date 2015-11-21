@@ -42,6 +42,7 @@ Adarsh questions:
 13. Event loop, Web worker - http://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/
 14. CSS interview questions
 15. Cache control - http://www.mobify.com/blog/beginners-guide-to-http-cache-headers/
+16. Deep clone an object - http://heyjavascript.com/4-creative-ways-to-clone-objects/
 
 Doubts: 
 1. How is debouncing different from throttle.. with code example
