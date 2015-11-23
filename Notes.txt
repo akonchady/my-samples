@@ -43,6 +43,18 @@ Adarsh questions:
 14. CSS interview questions
 15. Cache control - http://www.mobify.com/blog/beginners-guide-to-http-cache-headers/
 16. Deep clone an object - http://heyjavascript.com/4-creative-ways-to-clone-objects/
+function cloneObject(obj) {
+    if (obj === null || typeof obj !== 'object') {
+        return obj;
+    }
+
+    var temp = obj.constructor(); // give temp the original obj's constructor
+    for (var key in obj) {
+        temp[key] = cloneObject(obj[key]);
+    }
+
+    return temp;
+}
 
 Doubts: 
 1. How is debouncing different from throttle.. with code example
