@@ -23,7 +23,8 @@ scripting engine chrome, ie, mozilla -> fastest ----> v6
 16. throttle, Debounce - Done with doubts
 17. JSONP - http://javascript.webcodehelpers.com/2014/05/jsonp-cross-domain-ajax-call-using.html - Done
 
-obj.prototype = {}.... => overwrites the prototype. need to rewrite constructor.
+fn.prototype = {}.... => overwrites the prototype. need to rewrite constructor.
+fn.prototype.constructor = fn;
 
 
 Adarsh questions: 
@@ -62,9 +63,93 @@ Doubts:
 2.
 
 Questions that fucked me up:
+FLIPKART:
 1. Implement angular two way binding in vanilla js.
 2. Caching in browsers for resources
 
+CSS:
+Popup in center of page
+
+WALMART:
+JS:
+1.
+function Dog() {
+  this.a = 10;
+}
+
+function Cat() {
+}
+
+Inheritance:
+Object.create will not inherit public properties of function mapped to 'this' keyword.
+Cat.prototype = new A();
+ //new has a bug. Refer Stefanov ebook.
+
+2. Will function as object properties create a closure? Try an example.
+
+3. https://developer.mozilla.org/en/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+
+4.  new v/s Object.create
+   new - Will set __proto__ of newly created object to function.prototype before executing the function
+
+   So, when you call
+
+   var o = new Foo();
+   JavaScript actually just does
+
+   var o = new Object();
+   o.[[Prototype]] = Foo.prototype;
+   Foo.call(o);
+
+   Object.create(o) - Just creates a new object and points __proto__ to the passed in object.
+
+5. You have utility fn abc
+
+   function abc() {
+     this.a = 10;
+   }
+
+   abc() // window.a = 10;
+
+   Now ensure that if abc is called without creating a new object, set it in a new object...
+
+   function abc() {
+     if(!this instanceof abc) {
+        // Write something here
+     }
+   }
+
+Jquery:
+1. delegate,on,live difference.... what performance issues?
+
+CSS / CSS3:
+1. Div in center of page.
+margin:0 doesn't work for top,bottom
+use: top:50%, then translate -50%....
+Show with example...
+2. Is 'left' only for relative and absolute. What about 'margin-left'? Does margin-left work for relative/absolute elements?
+3. Media query syntax
+4. Popup in center of page
+5. ::before, ::after where does it put it exactly? - Before and after content of the target
+  Learn pseudo classes, pseudo elements
+
+HTML/HTML5:
+1. geolocation,
+2. localStorage persists on window close?
+3. Does label for work for input text field? Does click on label bring focus on textbox?
+
+
+AngularJS:
+1. Show count in filtered list
+Eg: u have a list of 30 elements using ng-repeat.
+Filter using a search textbox so only 2 items displaying now..
+Problem: Display 2 as count....
+
+2.
+Factory,service,provider - internal working ? what's the difference. and when to use what ?
+
+3 Use of 'track by' in Angular -
+  Link: https://docs.angularjs.org/api/ng/directive/ngRepeat#tracking-and-duplicates
 
 Interview questions links : 
 1. http://thatjsdude.com/interview/index.html
@@ -199,6 +284,9 @@ Notes :
                height: 200px;
                margin: auto;
              }
+	 https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ - if width,height is known
+	 https://css-tricks.com/centering-percentage-widthheight-elements/ - without width,height
+
 
 11. HTML5 APIs
 	http://www.sitepoint.com/10-html5-apis-worth-looking/
@@ -250,3 +338,24 @@ Notes :
     step-3 [1,2,3,4].splice(2,1) will return [3] and remaining array = [1,2,4]
     step-4 Use recursive method to get the permutation of the rest of the elements by passing array as string
     step-5 Finally, concat like a+permute(bc) for each
+
+13.
+Angular ng-options :
+http://www.undefinednull.com/2014/08/11/a-brief-walk-through-of-the-ng-options-in-angularjs/
+
+a. label for value in array
+
+label - <options>label</options>
+value - To be assigned to ng-model
+
+By default, unless specified, the model bound to the parent select box will be the 'value'  of the expression.
+
+b. select as label for value in array
+
+select - To be assigned to ng-model
+label - <options>label</options>
+
+Note: Always use 'track by' for ng-options
+
+14.
+http://www.toptal.com/angular-js/top-18-most-common-angularjs-developer-mistakes

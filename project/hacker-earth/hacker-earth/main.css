@@ -1,0 +1,81 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding-top: 75px;
+    font-family: 'Lato', sans-serif !important;
+    font-size: 20px !important;
+}
+
+body {
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/upfeathers.png");
+    background-origin: padding-box;
+    background-size: auto;
+    word-break: break-all;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {
+    float:none;
+}
+
+.problem-card {
+    margin: 10px 0px;
+    display: inline-block;
+}
+
+.problem-card > div {
+    border: 1px solid Gray;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: auto;
+    min-height: 200px;
+    padding: 15px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.problem-card img{
+    width: 100%;
+    height: auto;
+}
+
+.problem-description > div {
+    width: 100%;
+}
+
+.light {
+    color: #9ca3a8;
+}
+
+#searchForm .form-control-feedback {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.problem-card .glyphicon-thumbs-up {
+    font-size: 50px;
+    cursor: pointer;
+}

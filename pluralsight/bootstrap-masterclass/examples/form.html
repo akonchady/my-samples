@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap masterclass</title>
+
+    <link rel="stylesheet" href="../../../libraries/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Bootstrap Form Designing</h1>
+        </div>
+        <form action="">
+            <div class="form-group">
+                <label for="name">Name: </label>
+                <input type="text" class="form-control" id="name"/>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email: </label>
+                <input type="email" class="form-control" id="email"/>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password: </label>
+                <input type="password" class="form-control" id="password"/>
+            </div>
+        </form>
+
+        <div class="page-header" class="clearfix">
+            <h4>Bootstrap Inline Form Designing</h4>
+        </div>
+
+        <form action="" class="form-inline">
+            <div class="form-group col-md-4">
+                <label for="name1">Name1: </label>
+                <input type="text" class="form-control" id="name1"/>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="email1">Email1: </label>
+                <input type="email" class="form-control" id="email1"/>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="password1">Password1: </label>
+                <input type="password" class="form-control" id="password1"/>
+            </div>
+        </form>
+
+        <div class="page-header col-md-12">
+            <h4>Bootstrap Horizontal Form Designing</h4>
+        </div>
+
+        <form action="" class="form-horizontal">
+            <div class="form-group">
+                <label for="name3" class="control-label col-md-2">Name2: </label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="name3"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email3" class="control-label col-md-2">Email2: </label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="email3"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password3" class="control-label col-md-2">Password2: </label>
+                <div class="col-md-3">
+                    <input type="password" class="form-control" id="password3"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments" class="control-label col-md-2">Comments2: </label>
+                <div class="col-md-3">
+                    <textarea name="" class="form-control" id="comments" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Skills: </label>
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox"/>HTML</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox"/>HTML</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox"/>HTML</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Skills: </label>
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        <label class="checkbox-inline"><input type="checkbox"/>HTML1</label>
+                        <label class="checkbox-inline"><input type="checkbox"/>HTML2</label>
+                        <label class="checkbox-inline"><input type="checkbox"/>HTML3</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Gender: </label>
+                <div class="col-md-10">
+                    <div class="radio">
+                        <label><input type="radio" name="gender"/>Male</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="gender"/>Female</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Gender: </label>
+                <div class="col-md-10">
+                    <div class="radio">
+                        <label class="radio-inline"><input type="radio" name="gender"/>Male</label>
+                        <label class="radio-inline"><input type="radio" name="gender"/>Female</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="control-label col-md-2">Country</label>
+
+                <div class="col-md-10">
+                    <select name="" id="" class="form-control">
+                        <option value="US">US</option>
+                        <option value="US">UK</option>
+                        <option value="US">Afghanistan</option>
+                        <option value="US">India</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button class="btn btn-success btn-block">Click to Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="../../../libraries/jquery-1.11.3.js"></script>
+    <script src="../../../libraries/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
