@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo gallery project</title>
+
+    <link rel="stylesheet" href="../../../libraries/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="../../../libraries/lightbox2/css/lightbox.css"/>
+
+    <style>
+        body {
+            padding-bottom: 40px;
+        }
+        .thumbnail {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .thumbnail img {
+            width: 350px;
+            height: 200px;
+
+            -webkit-transition: all .2s ease;
+            -moz-transition: all .2s ease;
+            -ms-transition: all .2s ease;
+            -o-transition: all .2s ease;
+            transition: all .2s ease;
+
+            vertical-align: middle;
+        }
+        .thumbnail img:hover {
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            -o-transform: scale(1.5);
+            transform: scale(1.5);
+            /*position:relative;
+            z-index: 1;*/
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    Photo Gallery
+                </div>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="nature.html">Nature Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="page-header">
+                <h3>Photo Gallery</h3>
+            </div>
+
+            <div class="col-md-4">
+                <a href="../examples/images/img1.jpg" class="thumbnail" data-lightbox="gallery"
+                        data-title="This is the first image">
+                    <img src="../examples/images/img1.jpg" alt=""/>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="../examples/images/img2.jpg" class="thumbnail" data-lightbox="gallery"
+                   data-title="This is the second image">
+                    <img src="../examples/images/img2.jpg" alt=""/>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="../examples/images/img3.jpg" class="thumbnail" data-lightbox="gallery"
+                   data-title="This is the third image">
+                    <img src="../examples/images/img3.jpg" alt=""/>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="../examples/images/img2.jpg" class="thumbnail" data-lightbox="gallery"
+                   data-title="This is the fourth image">
+                    <img src="../examples/images/img2.jpg" alt=""/>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="../examples/images/img1.jpg" class="thumbnail" data-lightbox="gallery"
+                   data-title="This is the fifth image">
+                    <img src="../examples/images/img1.jpg" alt=""/>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="../examples/images/img3.jpg" class="thumbnail" data-lightbox="gallery"
+                   data-title="This is the sixth image">
+                    <img src="../examples/images/img3.jpg" alt=""/>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p class="text-center" style="padding: 10px;">Copyright Reserved by Adarsh Konchady</p>
+        </div>
+    </footer>
+
+    <script src="../../../libraries/jquery-1.11.3.js"></script>
+    <script src="../../../libraries/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <script src="../../../libraries/lightbox2/js/lightbox.js"></script>
+</body>
+
+</html>
