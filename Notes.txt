@@ -64,6 +64,7 @@ Doubts:
 
 Questions that fucked me up:
 FLIPKART:
+---------------------------
 1. Implement angular two way binding in vanilla js.
 2. Caching in browsers for resources
 
@@ -71,6 +72,7 @@ CSS:
 Popup in center of page
 
 WALMART:
+---------------------------
 JS:
 1.
 function Dog() {
@@ -154,7 +156,12 @@ Factory,service,provider - internal working ? what's the difference. and when to
 Interview questions links : 
 1. http://thatjsdude.com/interview/index.html
 2. https://github.com/h5bp/Front-end-Developer-Interview-Questions - 
-3. 
+3.
+
+TARGET:
+---------------------------
+1. How watchers work?
+2. How does Event object work in Angular?
 
 Notes :
 1. Performance improvements
