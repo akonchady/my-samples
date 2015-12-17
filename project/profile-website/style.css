@@ -156,6 +156,13 @@ h6 {
         float: none !important;
         text-align: center;
     }
+    .header .profile-content .social a {
+        width: 45px;
+        height: 45px;
+    }
+    .header .profile-content .social a .fa {
+        padding-top: 12px;
+    }
 }
 
 /* Small devices (tablets, 768px and up) */
