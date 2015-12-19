@@ -76,7 +76,7 @@
                 return;
             }
             event.preventDefault();
-            $.get('http://localhost:8081/answer/' + decodeURIComponent(value), function( data ) {
+            $.get('http://localhost:9647/answer/' + decodeURIComponent(value), function( data ) {
                 $( "#result" ).html( data );
             });
         });
