@@ -2,7 +2,7 @@ var restify = require('restify');
 
 function respond(req, res, next) {
     if(req.params.value && req.params.value.toLowerCase() === 'press') {
-        res.send('Hey there !!! Well Done. Send me this message and roll up your sleeves for your next task, which is to unscramble |esnrayde traernyag|');
+        res.send('Hey there !!! Well Done. Send me this message and roll up your sleeves for your next task, which is to unscramble |esnraydetraernyag|. Hint: 2 words');
     }
     else {
         res.send('Wrong answer !!! Please try again.');
