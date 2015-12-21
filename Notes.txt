@@ -3,6 +3,11 @@ Tags :
 
 1. Design patterns - pubsub - with examples
 	https://carldanley.com/js-module-pattern/
+
+	http://www.dofactory.com/javascript/design-patterns
+	- http://www.dofactory.com/javascript/observer-design-pattern - Observer / PubSub
+	- http://www.dofactory.com/javascript/iterator-design-pattern - Iterator
+
 2. algorithms(sort, search)
 3. data structure(queue, hashmap) 
 4. open source experience
@@ -66,6 +71,8 @@ Questions that fucked me up:
 FLIPKART:
 ---------------------------
 1. Implement angular two way binding in vanilla js.
+	http://johndyer.name/native-browser-get-set-properties-in-javascript/
+
 2. Caching in browsers for resources
 
 CSS:
@@ -162,6 +169,7 @@ TARGET:
 ---------------------------
 1. How watchers work?
 	http://johndyer.name/native-browser-get-set-properties-in-javascript/
+	http://dailyjs.com/2012/11/12/code-review-watch-js/
 
 2. How does Event object work in Angular?
 
