@@ -87,7 +87,7 @@ Object.create will not inherit public properties of function mapped to 'this' ke
 Cat.prototype = new A();
  //new has a bug. Refer Stefanov ebook.
 
-2. Will function as object properties create a closure? Try an example.
+2. Will function as object properties create a closure? Try an example. - Yes
 
 3. https://developer.mozilla.org/en/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 
@@ -161,6 +161,8 @@ Interview questions links :
 TARGET:
 ---------------------------
 1. How watchers work?
+	http://johndyer.name/native-browser-get-set-properties-in-javascript/
+
 2. How does Event object work in Angular?
 
 Notes :
