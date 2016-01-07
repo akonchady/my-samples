@@ -147,6 +147,7 @@ h6 {
 .secondary .skillset .skill-bar .skill-bar-inner {
     height: 15px;
     background-color: #66cb8c;
+    width: 0px;
 }
 
 /* Extra small devices (phones, less than 768px) */

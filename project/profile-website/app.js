@@ -1,6 +1,4 @@
 jQuery(document).ready(function ($) {
-    $('.skill-bar-inner').css('width', '0');
-
     $(window).on('load', function () {
         $('.skill-bar-inner').each(function () {
             var itemWidth = $(this).data('level');
@@ -35,9 +33,6 @@ jQuery(document).ready(function ($) {
             // default: '<li><a href="{url}">[{author}@{date}] {title}</a><br/>{shortBodyPlain}</li>'
             // valid values: any string
             entryTemplate: '<h3 class="title"><a href="{url}" target="_blank">{title}</a></h3><div><p>{shortBodyPlain}</p><a class="more-link" href="{url}" target="_blank"><i class="fa fa-external-link"></i>Read more</a></div>'
-
         }
     );
-
-
 });
