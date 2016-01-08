@@ -5,8 +5,14 @@ body {
     font-size: 17px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.5;
+    line-height: 2.0;
     text-align: justify;
+}
+::selection {
+    background: #DAE3E7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: #DAE3E7; /* Gecko Browsers */
 }
 h1,
 h2,
@@ -148,6 +154,24 @@ h6 {
     height: 15px;
     background-color: #66cb8c;
     width: 0px;
+}
+.secondary .certification {
+    overflow: hidden;
+}
+.secondary .certification .content .item .title {
+    overflow: hidden;
+    line-height: 1.5;
+}
+.secondary .certification .content .item .title i {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.secondary .certification .content .item .title span {
+    display: inline-block;
+    float: left;
+    width: 300px;
 }
 
 /* Extra small devices (phones, less than 768px) */
