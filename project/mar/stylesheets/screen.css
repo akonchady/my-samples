@@ -39,6 +39,10 @@ a:hover {
     outline: 0
 }
 
+.error {
+    border: 3px solid red;
+}
+
 h1 {
     font-size: 2em;
     margin: 0.67em 0

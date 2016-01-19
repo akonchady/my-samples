@@ -192,6 +192,7 @@ var save_the_date = {
             }*/
             if (!isUdupiReception && !isBhilaiReception) {
                 o = !0;
+                $('#checkin').addClass("error");
             }
 
             if (!o) {
