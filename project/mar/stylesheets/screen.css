@@ -289,9 +289,7 @@ h4 {
 
 .header .images span {
     display: inline-block;
-    width: 130px;
-    height: 130px;
-    background: url(../images/bride_n_groom.jpg);
+    /*background: url(../images/bride_n_groom.jpg);*/
     margin: 0.4em auto 0;
     border: 5px solid #fafafa;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -671,9 +669,9 @@ footer p {
 }
 
 @media only screen and (min-width: 480px) {
-    body {
+    /*body {
         padding-top: 60px;
-    }
+    }*/
     .pile:before {
         content: "";
         position: absolute;
@@ -692,8 +690,7 @@ footer p {
         font-size: 2.5em
     }
     .header .images span {
-        width: 200px;
-        height: 200px;
+        width: 400px;
         margin: 0.2em auto 0
     }
     .header .images span:first-child {
@@ -709,7 +706,7 @@ footer p {
     }
     .ceremony {
         position: relative;
-        z-index: 0
+        z-index: 0;
     }
     .ceremony .image {
         display: inline-block;
@@ -732,7 +729,18 @@ footer p {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    body {
+        padding-top: 50px;
+    }
+}
+
+
 @media only screen and (min-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
     h3 {
         font-size: 2em;
         margin: 0.2em 0 0.2em
@@ -818,14 +826,16 @@ footer p {
         font-size: .5em
     }
     .header .images span {
-        width: 250px;
-        height: 250px;
+        width: 400px;
         border-width: 10px;
         margin: 0.2em auto 0
     }
-    .header .images span:first-child {
-        margin-right: 80px
+    .header .images span img{
+        width: 100%;
     }
+    /*.header .images span:first-child {
+        margin-right: 80px
+    }*/
     .header .images span:before {
         padding: 14px;
         left: -14px;

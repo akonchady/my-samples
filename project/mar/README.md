@@ -6,3 +6,7 @@ sudo -i
 
 mar > sudo forever start node_modules/http-server/bin/http-server -p 80
 
+cd javascript/server
+
+forever start app.js
+
