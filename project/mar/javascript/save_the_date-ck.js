@@ -1,13 +1,3 @@
-/**
- * Save the Date - Responsive Wedding Invitation
- * -----------
- *
- * author: PeHaa Hetman
- * email: info@pehaa.com
- *
- * version 1.0 release date: 24.03.2013
- *
- **/
 var save_the_date = {
     defaults: {
         weddingDate: "",
