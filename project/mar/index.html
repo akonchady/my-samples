@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Save the date - Responsive Wedding Invitation</title>
+    <meta name="description" content="Save the date - Responsive, retina-ready, Wedding Invitation">
+    <meta name="author" content="PeHaa Hetman and PinkOnHead">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--   Google fonts  -->
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=BenchNine:700' rel='stylesheet' type='text/css'>
+    <!--   main stylesheet  -->
+    <link rel="stylesheet" href="stylesheets/screen.css" type="text/css" media="screen" title="no title">
+    <link id="colors" rel="stylesheet" href="stylesheets/red.css" type="text/css" media="screen" title="no title">
+    <link rel="stylesheet" href="stylesheets/settings.css" type="text/css" media="screen" title="no title">
+
+    <script >
+        // iOS viewport scaling bug fix
+        // https://gist.github.com/901295
+        // Rewritten version
+        // By @mathias, @cheeaun and @jdalton
+
+        (function(doc) {
+
+            var addEvent = 'addEventListener',
+                    type = 'gesturestart',
+                    qsa = 'querySelectorAll',
+                    scales = [1, 1],
+                    meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+
+            function fix() {
+                meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+                doc.removeEventListener(type, fix, true);
+            }
+
+            if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+                fix();
+                scales = [.25, 1.6];
+                doc[addEvent](type, fix, true);
+            }
+
+        }(document));
+    </script>
+
+    <!-- custom modernizr build -->
+    <script src="javascript/modernizr.js"></script>
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- GoogleMaps -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <!-- GoogleMaps, photo gallery and slider -->
+    <script src="javascript/libraries-ck.js"></script>
+    <!-- custom js class -->
+    <script src="javascript/save_the_date-ck.js"></script>
+
+    <!-- SETTINGS STARTS -->
+    <script>
+        $(document).ready(function() {
+            // init Save the Date
+            save_the_date.init({
+                weddingDate: "2016/02/04, 11:00",
+                //Date : enter your wedding date
+                labels: ["days", "hours", "minutes", "secs"],
+                //Array of strings : labels of time units
+                sendServerMessages: ["Thank you.", "Sorry, your message could not be sent due to an error."],
+                //Array of strings : Messages from the server on send
+                gallery : ["images/gallery/gallery1.jpg", "images/gallery/gallery2.jpg", "images/gallery/gallery3.jpg", "images/gallery/gallery4.jpg"],
+                //Array image pathes
+                titles : ['Just us', 'Reception', 'Flowers we chose', 'In the eyes'],
+                //Array of strings : corresponding titles
+            });
+        });
+    </script>
+    <!-- SETTINGS ENDS -->
+
+    <!--<script src="javascript/init-ck.js" type="text/javascript" charset="utf-8"></script>-->
+
+</head>
+<!--[if lt IE 9]> <body  id="top" class="ie-fix"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--> <body  id="top"><!--<![endif]-->
+
+<!--- NAVIGATION STARTS -->
+<div class="nav-container">
+    <div class="nav">
+        <a  id="full-menu" href="#">&equiv;</a>
+        <a class="active to-scroll" href="#top">Home</a>
+        <a class="to-scroll" href="#about">About Us</a>
+        <a class="to-scroll" href="#ceremony">Ceremony</a>
+        <!--<a class="to-scroll" href="#registry">Registry</a>-->
+        <!--<a href="#" id="gallery">Gallery</a>-->
+        <a class="to-scroll" href="#rsvp">R.S.V.P.</a>
+        <div class="effect"></div>
+    </div>
+</div>
+<!--- NAVIGATION ENDS -->
+
+<!-- HEADER STARTS -->
+<header class="header" role="banner">
+    <h1 class="wrapper"><span>Sarita</span> & <span>Adarsh</span></h1>
+    <div class="images"><span class="her pile"></span><span class="him pile"></span></div>
+    <h2>
+        <span class="event">are getting married...</span>
+        <span class="date">04 February 2016</span>
+        <span id="timer" class="timer"></span>
+    </h2>
+</header>
+<!-- HEADER ENDS -->
+
+<!--- MAIN CONTENT STARTS -->
+<div class="content">
+
+    <!-- ABOUT SECTION STARTS -->
+    <section id="about" class="about clearfix">
+        <div class="she">
+            <p>
+                <strong>Sarita</strong> grew up in Bhillai, Chattisgarh.
+            </p>
+        </div>
+        <div class="he">
+            <p>
+                <strong>Adarsh</strong> grew up in Mumbai, Maharashtra. He went to college in Nitte, Karkala to get his B.E. degree and then was hired in every parent's favorite company Infosys. He is mostly imagined as a nerd who is just into studies and his hobbies include travelling and listening to music.
+            </p>
+        </div>
+        <div class="they">
+            <p>
+                <strong>They</strong> both met while he was working in Infosys and she was in TCS. Yes Electronics City !
+            </p>
+            <p>
+                They are excited to be heading back to their homes for their wedding reception. Yes they do have 2 receptions at 2 places!
+            </p>
+        </div>
+    </section>
+    <!-- ABOUT SECTION ENDS -->
+
+
+    <!-- CEREMONY SECTION STARTS -->
+    <section  id="ceremony" class="flex-container ceremony">
+
+        <div class="flexslider">
+            <ul class="slides">
+                <li style="background-image: url(images/slide0.jpg);"></li>
+                <li style="background-image: url(images/slide1.jpg);"></li>
+                <li class="fixed" style="background-image: url(images/slide2.jpg);"></li>
+            </ul>
+        </div>
+
+        <div  class="clearfix">
+
+            <h2 class="title">04.02.2016</h2>
+            <div class="ceremony-marriage">
+							<span class="image pile">
+								<img src="images/arya-samaj-indiranagar.jpg" width="300" height="300" alt="Church">
+							</span>
+                <h3>Ceremony</h3>
+                <p>Thursday, 4th Feb 2016, 9 AM onwards</p>
+                <p>Arya Samaj Mandir, Indiranagar, Bangalore - 560 038, Karnataka</p>
+                <a class="map" data-lat="12.9785003" data-lng="77.6391153" data-title="Ceremony">Show in Google Maps</a>
+                <div class="pile my_map"><div id="map-ceremony-marriage"></div></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="ceremony-1">
+                    <span class="image pile">
+                        <img src="images/reception.jpg" width="300" height="300" alt="Reception">
+                    </span>
+                    <h3>Reception at Udupi</h3>
+                    <p>Sunday, 7th Feb 2016, 12 PM onwards</p>
+                    <p>Hotel Durga International, Near City Bus Stand, Udupi - 576 101, Karnataka</p>
+                    <a class="map" data-lat="13.3437946" data-lng="74.7470635" data-title="Reception" >Show in Google Maps</a>
+                    <div class="pile my_map"><div id="map-reception"></div></div>
+                </div>
+                <div class="ceremony-2">
+                    <span class="image pile">
+                        <img src="images/arya-samaj-indiranagar.jpg" width="300" height="300" alt="Church">
+                    </span>
+                    <h3>Reception at Bhilai</h3>
+                    <p>Sunday, 14th Feb 2016, 8 PM onwards</p>
+                    <p>Ashirwad Bhavan, Maitri Kunj, Risali, Bhilai - 490 006, Chattisgarh</p>
+                    <a class="map" data-lat="21.165673" data-lng="81.325097" data-title="Ceremony">Show in Google Maps</a>
+                    <div class="pile my_map"><div id="map-ceremony"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CEREMONY SECTION ENDS -->
+
+    <!--- REGISTRY STARTS -->
+    <!--<section id="registry" class="registry">
+        <div class="wrapper">
+            <h2 class="title">Gifts registry</h2>
+            <h3>Some awesome gifts ideas</h3>
+            <p>Your presence is enough but if you are compelled by extreme generosity, registries have been set up
+                for your convenience at :</p>
+            <ul>
+                <li><a href="#"><img src="images/registry/macys.png" width="228" height="43" alt="Macys"></a></li>
+                <li><a href="#"><img src="images/registry/tiffany.png" width="228" height="43" alt="Tiffany"></a></li>
+                <li><a href="#"><img src="images/registry/cratebarrel.png" width="228" height="43" alt="Cratebarrel"></a></li>
+            </ul>
+        </div>
+    </section>-->
+    <!--- REGISTRY ENDS -->
+
+    <!--- RSVP STARTS -->
+    <section id="rsvp" class="contact">
+        <h2 class="title">R.S.V.P.</h2>
+        <div class="wrapper">
+
+            <div id="note">
+                <p>We look forward to celebrating with you.</p>
+                <p>Please reply by February 1, 2016.</p>
+            </div>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <h3>Will you be attending at the events?</h3>
+                    <div class="checkbox">
+                        <input type="checkbox" name="check-ceremony" id="check-ceremony" >
+                        <label for="check-ceremony">I (we) will be attending the ceremony.</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="check-reception" id="check-reception" >
+                        <label for="check-reception">I (we) will be attending the reception.</label>
+                    </div>
+                </fieldset>
+
+                <fieldset id="guests">
+                    <h3>Guest Details:</h3>
+                    <input type="text"  id="adults" name="adults" placeholder="Number of Adult Guests*">
+                    <input type="text"  id="children" name="children" placeholder="Number of Children">
+                </fieldset>
+
+                <fieldset>
+                    <h3>Personal Informations:</h3>
+                    <input type="text" id="name" name="name" placeholder="Your Name*">
+                    <input type="email" id="email" name="email" placeholder="Your E-mail*">
+                    <textarea name="message" class="form-message" id="message" placeholder="Want to drop us a line ?"></textarea>
+                </fieldset>
+
+                <input type="submit" class="submit" id="send" value="send">
+
+            </form>
+
+            <h3>Or contact us directly:</h3>
+            <div class="contact-details contact-details-1">
+                <h4>Sarita</h4>
+                <p>+91 96323 33546</p>
+                <p>
+                    <a href="mailto:saritanair101@gmail.com?subject=RSVP">saritanair101@gmail.com</a>
+                </p>
+            </div>
+            <div class="contact-details contact-details-2">
+                <h4>Adarsh</h4>
+                <p>+91 98449 25626</p>
+                <p>
+                    <a href="mailto:akonchady@gmail.com?subject=RSVP">akonchady@gmail.com</a>
+                </p>
+            </div>
+        </div>
+
+    </section>
+    <!--- RSVP ENDS -->
+
+    <!-- FOOTER STARTS -->
+    <footer id="footer">
+        <p class="copyright"> &copy; 2015 <a href="#">Save the date.</a> All rights reserved.</p>
+    </footer>
+    <!-- FOOTER ENDS -->
+
+</div>
+<!--- MAIN CONTENT ENDS -->
+
+</body>
+</html>
