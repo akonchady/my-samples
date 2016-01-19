@@ -159,10 +159,10 @@ var save_the_date = {
     },
     rsvp: function() {
         var e = this;
-        $("#check-reception:checked").parent().parent().next("#guests").show();
-        $("#check-reception").change(function() {
+        // $("#check-reception:checked").parent().parent().next("#guests").show();
+        /*$("#check-reception").change(function() {
             $("#guests").slideToggle("slow")
-        });
+        });*/
         if (!Modernizr.input.placeholder) {
             var t = ["#name", "#email", "textarea", "#adults", "#children"];
             $(t).each(function(e, t) {
@@ -170,32 +170,37 @@ var save_the_date = {
             })
         }
         $("#rsvp form").submit(function() {
-            var t = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
-                n = $("#email").val(),
-                r = $("#name").val(),
-                i = $("#check-reception").is(":checked"),
-                s = $("#adults").val(),
+            //var t = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
+            //  n = $("#email").val(),
+            var r = $("#name").val(),
+                isCeremony = $("#check-ceremony").is(":checked"),
+                isReception = $("#check-reception").is(":checked"),
+                // s = $("#adults").val(),
                 o = !1;
             $(".error").removeClass("error");
-            if (i && s !== undefined && (s === "" || s === $("#adults").attr("placeholder"))) {
+            /*if (i && s !== undefined && (s === "" || s === $("#adults").attr("placeholder"))) {
                 $("#adults").addClass("error");
                 o = !0
-            }
+            }*/
             if (r === "" || r === $("#name").attr("placeholder")) {
                 $("#name").addClass("error");
                 o = !0
             }
-            if (n === "" || t.test(n) === !1) {
+            /*if (n === "" || t.test(n) === !1) {
                 $("#email").addClass("error");
                 o = !0
+            }*/
+            if (!isCeremony && !isReception) {
+                o = !0;
             }
+
             if (!o) {
                 var u = $(this),
                     a = $(u).serialize(),
                     f = $("#note");
                 $.ajax({
                     type: "POST",
-                    url: "send.php",
+                    url: "http://localhost:8888/rsvp",
                     data: a,
                     success: function(t) {
                         var n = "";
@@ -207,10 +212,10 @@ var save_the_date = {
                                 }, "slow");
                                 n = e.option.sendServerMessages[0];
                                 break;
-                            case "error":
+                            default:
                                 n = e.option.sendServerMessages[1]
                         }
-                        f.html(n)
+                        f.html('<h3>' + n + '</h3>')
                     }
                 });
                 return !1

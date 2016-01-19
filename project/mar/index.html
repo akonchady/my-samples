@@ -21,7 +21,6 @@
         // iOS viewport scaling bug fix
         // https://gist.github.com/901295
         // Rewritten version
-        // By @mathias, @cheeaun and @jdalton
 
         (function(doc) {
 
@@ -100,7 +99,10 @@
 <!-- HEADER STARTS -->
 <header class="header" role="banner">
     <h1 class="wrapper"><span>Sarita</span> & <span>Adarsh</span></h1>
-    <div class="images"><span class="her pile"></span><span class="him pile"></span></div>
+    <!--<div class="images">
+        <span class="her pile"></span>
+        <span class="him pile"></span>
+    </div>-->
     <h2>
         <span class="event">are getting married...</span>
         <span class="date">04 February 2016</span>
@@ -129,7 +131,7 @@
                 <strong>They</strong> both met while he was working in Infosys and she was in TCS. Yes Electronics City !
             </p>
             <p>
-                They are excited to be heading back to their homes for their wedding reception. Yes they do have 2 receptions at 2 places!
+                They are excited to be heading back to their homes for their wedding reception. And they do have 2 receptions!
             </p>
         </div>
     </section>
@@ -213,7 +215,7 @@
                 <p>Please reply by February 1, 2016.</p>
             </div>
 
-            <form action="#" method="post">
+            <form action="http://localhost:8888/rsvp" method="post">
 
                 <fieldset>
                     <h3>Will you be attending at the events?</h3>
@@ -234,9 +236,9 @@
                 </fieldset>
 
                 <fieldset>
-                    <h3>Personal Informations:</h3>
-                    <input type="text" id="name" name="name" placeholder="Your Name*">
-                    <input type="email" id="email" name="email" placeholder="Your E-mail*">
+                    <h3>Personal Information:</h3>
+                    <input type="text" id="name" name="name" placeholder="Your Name *" required>
+                    <input type="text" id="phone" name="phone" placeholder="Your Phone *" required>
                     <textarea name="message" class="form-message" id="message" placeholder="Want to drop us a line ?"></textarea>
                 </fieldset>
 
@@ -265,9 +267,9 @@
     <!--- RSVP ENDS -->
 
     <!-- FOOTER STARTS -->
-    <footer id="footer">
+    <!--<footer id="footer">
         <p class="copyright"> &copy; 2015 <a href="#">Save the date.</a> All rights reserved.</p>
-    </footer>
+    </footer>-->
     <!-- FOOTER ENDS -->
 
 </div>

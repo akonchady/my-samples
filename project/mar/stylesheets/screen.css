@@ -24,7 +24,8 @@ html {
 }
 
 body {
-    margin: 0
+    margin: 0;
+    /*padding-top: 60px;*/
 }
 
 p {
@@ -213,7 +214,12 @@ h4 {
 .nav-container {
     background: #393939;
     position: relative;
-    font-size: 1.2em
+    font-size: 1.2em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
 }
 
 .nav-container:after {
@@ -605,7 +611,8 @@ input[type='submit']:hover {
     padding-left: 25px;
     height: 20px;
     display: inline-block;
-    line-height: 20px
+    line-height: 20px;
+    cursor: pointer;
 }
 
 .no-touch.opacity .checkbox label:before {
@@ -664,6 +671,9 @@ footer p {
 }
 
 @media only screen and (min-width: 480px) {
+    body {
+        padding-top: 60px;
+    }
     .pile:before {
         content: "";
         position: absolute;
