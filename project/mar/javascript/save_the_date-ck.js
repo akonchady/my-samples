@@ -200,7 +200,8 @@ var save_the_date = {
                     f = $("#note");
                 $.ajax({
                     type: "POST",
-                    url: "http://52.10.6.140/rsvp",
+                    url: "http://52.10.6.140:81/rsvp",
+                    // url: "http://localhost:81/rsvp",
                     data: a,
                     success: function(t) {
                         var n = "";
