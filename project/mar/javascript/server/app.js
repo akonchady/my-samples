@@ -43,8 +43,8 @@ var MessageSchema = new Schema({
     name: String,
     phone: String,
     message: String,
-    attendsCeremony: Boolean,
-    attendsReception: Boolean,
+    attendsUdupiReception: Boolean,
+    attendsBhilaiReception: Boolean,
     date: Date
 });
 
@@ -77,8 +77,8 @@ var postMessage = function(req, res, next) {
     message.name = req.params.name;
     message.phone = req.params.phone;
     message.message = req.params.message;
-    message.attendsCeremony = req.params['check-ceremony'] === 'on' ? true : false;
-    message.attendsReception = req.params['check-reception'] === 'on' ? true : false;
+    message.attendsUdupiReception = req.params['checkUdupiReception'] === 'on' ? true : false;
+    message.attendsBhilaiReception = req.params['checkBhilaiReception'] === 'on' ? true : false;
     message.date = new Date();
     message.save(function () {
         res.send('success');
