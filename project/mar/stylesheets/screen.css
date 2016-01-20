@@ -154,7 +154,7 @@ body {
     background-attachment: fixed;
     font-family: "BenchNine", "Arial Narrow", sans-serif;
     font-weight: 700;
-    font-size: 20px
+    font-size: 21px;
 }
 
 a {
@@ -685,6 +685,14 @@ footer p {
 
 #ceremonyCalendar a.atcb-link, #udupiReceptionCalendar a.atcb-link, #bhilaiReceptionCalendar a.atcb-link {
     background-color: #F88484;
+}
+
+.center {
+    text-align: center;
+}
+
+.ceremony .wrapper {
+    margin-top: 1em;
 }
 
 @media only screen and (min-width: 480px) {
