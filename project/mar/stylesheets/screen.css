@@ -673,10 +673,21 @@ footer p {
     margin: 0
 }
 
+.addtocalendar {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.atc-style-blue .atcb-item.hover,
+.atc-style-blue .atcb-item:hover {
+    background: #F88484;
+}
+
+#ceremonyCalendar a.atcb-link, #udupiReceptionCalendar a.atcb-link, #bhilaiReceptionCalendar a.atcb-link {
+    background-color: #F88484;
+}
+
 @media only screen and (min-width: 480px) {
-    /*body {
-        padding-top: 60px;
-    }*/
     .pile:before {
         content: "";
         position: absolute;
@@ -1207,7 +1218,7 @@ only screen and (min-device-pixel-ratio: 1.5) and (min-width: 1140px) {
 
 .flexslider .slides>li {
     display: none;
-    padding-bottom: 45%;
+    /*padding-bottom: 45%;*/
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.6), inset 0 -10px 20px -10px rgba(0, 0, 0, 0.6)
@@ -1222,7 +1233,7 @@ only screen and (min-device-pixel-ratio: 1.5) and (min-width: 1140px) {
     }
 }
 
-.flexslider .slides img {
+.flexslider .slides li {
     max-width: 100%;
     display: block
 }

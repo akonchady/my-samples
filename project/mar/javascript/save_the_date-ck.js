@@ -162,7 +162,8 @@ var save_the_date = {
         $("#rsvp form").submit(function() {
             //var t = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
             //  n = $("#email").val(),
-            var r = $("#name").val(),
+            var name = $("#name").val().trim(),
+                phone = $("#phone").val().trim(),
                 isCeremony = $("#checkCeremony").is(":checked"),
                 isUdupiReception = $("#checkUdupiReception").is(":checked"),
                 isBhilaiReception = $("#checkBhilaiReception").is(":checked"),
@@ -173,8 +174,12 @@ var save_the_date = {
                 $("#adults").addClass("error");
                 o = !0
             }*/
-            if (r === "" || r === $("#name").attr("placeholder")) {
+            if (name === "" || name === $("#name").attr("placeholder")) {
                 $("#name").addClass("error");
+                o = !0
+            }
+            if (phone === "" || name === $("#phone").attr("placeholder")) {
+                $("#phone").addClass("error");
                 o = !0
             }
             /*if (n === "" || t.test(n) === !1) {
