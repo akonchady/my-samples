@@ -606,7 +606,7 @@ input[type='submit']:hover {
 .no-touch.opacity .checkbox {
     position: relative;
     font-size: 1.2em;
-    text-align: center
+    /*text-align: center*/
 }
 
 .no-touch.opacity .checkbox label {

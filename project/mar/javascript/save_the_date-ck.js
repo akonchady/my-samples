@@ -163,6 +163,7 @@ var save_the_date = {
             //var t = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
             //  n = $("#email").val(),
             var r = $("#name").val(),
+                isCeremony = $("#checkCeremony").is(":checked"),
                 isUdupiReception = $("#checkUdupiReception").is(":checked"),
                 isBhilaiReception = $("#checkBhilaiReception").is(":checked"),
                 // s = $("#adults").val(),
@@ -180,7 +181,7 @@ var save_the_date = {
                 $("#email").addClass("error");
                 o = !0
             }*/
-            if (!isUdupiReception && !isBhilaiReception) {
+            if (!isCeremony && !isUdupiReception && !isBhilaiReception) {
                 o = !0;
                 $('#checkin').addClass("error");
             }
