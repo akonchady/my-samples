@@ -4,7 +4,7 @@ Instructions to run on AWS instance:
 
 sudo -i
 
-mar > sudo forever start node_modules/http-server/bin/http-server -p 80
+mar > sudo forever start node_modules/http-server/bin/http-server -p 80 -d false
 
 cd javascript/server
 
