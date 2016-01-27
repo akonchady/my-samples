@@ -683,7 +683,8 @@ footer p {
     background: #F88484;
 }
 
-#ceremonyCalendar a.atcb-link, #udupiReceptionCalendar a.atcb-link, #bhilaiReceptionCalendar a.atcb-link {
+#ceremonyCalendar a.atcb-link, #udupiReceptionCalendar a.atcb-link, #bhilaiReceptionCalendar a.atcb-link,
+#ceremonyLunchCalendar a.atcb-link {
     background-color: #F88484;
 }
 
