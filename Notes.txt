@@ -128,6 +128,24 @@ Cat.prototype = new A();
      }
    }
 
+6. What is clearfix?
+	http://stackoverflow.com/questions/8554043/what-is-clearfix
+
+	.clearfix:after {
+       content: " "; /* Older browser do not support empty content */
+       visibility: hidden;
+       display: block;
+       height: 0;
+       clear: both;
+    }
+    Or, if you don't require IE<8 support, the following is fine too:
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
 Jquery:
 1. delegate,on,live difference.... what performance issues?
 
@@ -172,6 +190,32 @@ TARGET:
 	http://dailyjs.com/2012/11/12/code-review-watch-js/
 
 2. How does Event object work in Angular?
+
+EVENTSHIGH: - https://www.eventshigh.com/
+-------------------------------
+1. How facebook auto logs you in every time once you have logged in?
+2. Libraries for decreasing image quality?
+3. https://grabhouse.com/ - How that animation is done?
+	- Find about svg animation using path
+4. Find kth smallest element in the array.
+
+INTEL
+-------------------------------
+1. Search an element in a sorted and rotated array.
+   Link: http://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
+
+2. Given a matrix (not exactly sure if this was the question !)
+A B C
+D E F
+G E H
+
+Print
+AD AE AF
+AG AE AH
+BD BE BF
+BG BE BH
+CD CE CF
+CG CE CH
 
 Notes :
 1. Performance improvements
