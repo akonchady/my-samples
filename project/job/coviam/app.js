@@ -85,7 +85,7 @@
                     self.cartItemCount--;
                     product.addedCount = 0;
                 }
-            })
+            });
 
             self.persist();
         };
