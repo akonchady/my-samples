@@ -1,0 +1,203 @@
+SASS
+    - SASS is an acronym which stands for Syntactically Awesome Stylesheets.
+    - It is a CSS preprocessor which is used to reduce repetition with CSS and save time.
+
+
+Sass Vs SCSS
+    - Sass is a CSS pre-processor and an extension of CSS3.
+    - Sass has two syntax:
+        - The first syntax is "SCSS" and it uses the .scss extension.
+        - The other syntax is indented syntax or just "Sass" and it uses the .sass extension.
+    - Sass has loose syntax with white space and no semicolons while SCSS is more similar to CSS.
+    - Any CSS valid document can be converted to Sass by simply changing the extension from .CSS to .SCSS.
+
+
+Features of SASS
+    - You can write codes easily and efficiently and they are easy to maintain.
+    - It is a pre-processing language which provides its own syntax for CSS.
+    - It is more stable, powerful and fully compatible to CSS3.
+    - It is time saving because it facilitates you to write CSS in less code.
+    - It uses its own syntax.
+    - It is based on the JavaScript.
+    - It is an Open source pre-processor which is interpreted into CSS.
+    - It has many useful functions for manipulating colors and other values.
+    - It has advance features like control directives for libraries.
+    - Time saving.
+    - More efficient and quicker.
+    - Compatible with all versions of CSS.
+    - You can use nested syntax and useful functions such as color manipulation, mathematics and other values.
+    - Write clean CSS in programming construct.
+
+LESS:
+    - LESS is dynamic style sheet producing language.
+    - LESS is a CSS pre-processors and extends CSS with dynamic behaviour.
+    - It allows for variables, mixins, operations and functions.
+    - LESS runs on server side and client side both.
+
+Variable in SASS
+    - A variable begins with a ($) sign and variable assignment is completed with a semicolon ; sign.
+        $primary-color: #333;
+        body {
+          color: $primary-color;
+        }
+
+
+Variable in LESS
+    - A variable begins with a (@) sign and variable assignment is completed with a semicolon ; sign.
+        @mainLessColor: #ff0087;
+        p {color: @mainLessColor;}
+
+
+@import function in SASS?
+    - It is used to extend the CSS import rule by enabling import of SCSS and Sass files.
+    - All imported files are merged into a single outputted CSS file.
+    - Can virtually mix and match any file and be certain of all your styles.
+    - @IMPORT takes a filename to import.
+    - CSS has an import option that lets you split your CSS into smaller, more maintainable portions.
+
+
+Nested rules
+    - Both Sass and LESS have the same fashion in nesting rules
+    - Nesting is a method of combining multiple logic structures within one another.
+    - In Sass, multiple CSS rules are combined within one another.
+    - For example, if you are using multiple selectors then you can use one selector inside another to create compound selectors.
+        nav {
+            ul {
+                color: #fff;
+            }
+            li { display: inline-block; }
+        }
+
+        )
+
+
+Mixins in SASS
+    - Mixins enable embedding all the properties of a class into another class by including the class name as one of its properties.
+    - It is just like variables but for whole classes.
+    - Mixin function facilitates you to define styles that can be re-used throughout the stylesheet without needing to resort to non-semantic classes like .float-left.
+        @mixin headline ($color, $size) {
+            color: $color;
+            font-size: $size;
+        }
+        h1 {
+            @include headline(green, 12px);
+        }
+
+    Default Values
+        @mixin headline($size, $color: red) {
+            color: $color;
+            font-size: $size;
+        }
+        h1 {
+            @include headline(12px);
+        }
+
+    Keyword Arguments
+        @mixin headline($size, $color: red) {
+            color: $color;
+            font-size: $size;
+        }
+        h1 {
+            @include headline($color: blue, $size: 12px);
+        }
+
+    Variable arguments
+        @mixin pad ($pads...) {
+            padding: $pads;
+        }
+        .one {
+            @include pad(20px);
+        }
+        .two {
+            @include pad(10px 20px);
+        }
+        .three {
+            @include pad(10px 20px 40px);
+        }
+        .four {
+            @include pad(10px 20px 30px 20px);
+        }
+
+
+Mixins as a Function in LESS
+    - Mixins can also be functions. This way you can pass a variable or parameter to your added mixin
+        .border-top-radius(@radius) {
+            border-top-right-radius: @radius;
+            border-top-left-radius: @radius;
+        }
+        div {
+            .border-top-radius(125px);
+            background: rgb(255, 255, 255);
+        }
+
+    Default Value
+        .RoundBorders (@radius: 5px) {
+            border-radius: @radius;
+            -moz-border-radius: @radius;
+            -webkit-border-radius: @radius;
+        }
+        header {
+          .RoundBorders;
+        }
+
+    Variable arguments
+        .BoxShadow(@x: 0, @y: 0, @blur: 1px, @color: #000) {
+            box-shadow: @arguments;
+            -moz-box-shadow: @arguments;
+            -webkit-box-shadow: @arguments;
+        }
+        .BoxShadow(2px, 5px);
+
+        Which results in:
+            box-shadow: 2px 5px 1px #000;
+            -moz-box-shadow: 2px 5px 1px #000;
+            -webkit-box-shadow: 2px 5px 1px #000;
+
+
+Extend/Inheritance in SASS
+    - Using @extend lets you share a set of CSS properties from one selector to another.
+    - It helps keep your Sass very DRY.
+    - In our example we're going to create a simple series of messaging for errors, warnings and successes.
+    - Example
+        .message {
+            border: 1px solid #ccc;
+            padding: 10px;
+            color: #333;
+        }
+        .success {
+            @extend .message;
+            border-color: green;
+        }
+        .error {
+            @extend .message;
+            border-color: red;
+        }
+        .warning {
+            @extend .message;
+            border-color: yellow;
+        }
+    - OUTPUT
+        .message, .success, .error, .warning {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            color: #333;
+        }
+        .success {
+            border-color: green;
+        }
+        .error {
+            border-color: red;
+        }
+        .warning {
+            border-color: yellow;
+        }
+
+
+Operators in SASS
+    - ass has a handful of standard math operators like +, -, *, /, and %
+    - In our example we're going to do some simple math to calculate widths for an article.
+    - Example:
+        article[role="main"] {
+            float: left;
+            width: 600px / 960px * 100%;
+        }

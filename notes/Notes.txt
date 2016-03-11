@@ -204,18 +204,26 @@ INTEL
 1. Search an element in a sorted and rotated array.
    Link: http://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
 
-2. Given a matrix (not exactly sure if this was the question !)
-A B C
-D E F
-G E H
+2. Given a 2D array arr and an input arr aI, find all the combinations of rows mentioned in array aI in arr.
+       arr
+       A B C
+       D E F
+       G H I
+       J K L
 
-Print
-AD AE AF
-AG AE AH
-BD BE BF
-BG BE BH
-CD CE CF
-CG CE CH
+    Input (Row numbers):
+       aI
+       0 3
+
+       Output: AJ, AK, AL, BJ, BK, BL, CJ, CK, CL
+
+    Input:
+       aI: 0 3 0
+       Output: AJA, AJB, AJC, AKA, AKB, AKC, ALA, ALB, ALC
+               BJA, BJB, BJC, BKA, BKB, BKC, BLA, BLB, BLC
+               CJA, CJB, CJC, CKA, CKB, CKC, CLA, CLB, CLC
+
+       Formula for number of rows in output: 3 ^ (number of elements in aI)
 
 Notes :
 1. Performance improvements
