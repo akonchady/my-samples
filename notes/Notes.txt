@@ -225,6 +225,45 @@ INTEL
 
        Formula for number of rows in output: 3 ^ (number of elements in aI)
 
+PWC
+------------------------------------------------------
+1. Regex to remove all vowels in a given string
+function removeVowels(str) {
+    return str.replace(/[aeiou]/gim, '');
+}
+
+2.
+function del(a) {
+  delete a;
+  return a;
+}
+
+delete('d'); // prints 'd'
+
+delete has effect only on object properties
+
+MAKEMYTRIP
+----------------------------------------
+1.
+var foo = {
+  bar: function() {
+    return this.baz;
+  },
+  baz: 1
+};
+
+
+(function() {
+    return typeof arguments[0]();
+})(foo.bar);
+
+// Prints 'undefined'. (Reason: foo.bar executed in global context. Hence this refers to 'window' object)
+
+2. Creating and triggering events
+    https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+
+3.
+
 Notes :
 1. Performance improvements
 	a. Avoid too many event listeners
