@@ -92,7 +92,9 @@ function Cat() {
 Inheritance:
 Object.create will not inherit public properties of function mapped to 'this' keyword.
 Cat.prototype = new A();
- //new has a bug. Refer Stefanov ebook.
+
+Refer following link for the solution:
+https://adarshkonchady.wordpress.com/2016/03/18/problem-with-using-new-for-inheritance/
 
 2. Will function as object properties create a closure? Try an example. - Yes
 
