@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html ng-app="mygola">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyGola</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="main.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-controller="HomeController as hc">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                    <h1>MyGola</h1>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" ng-click="hc.addNote()">
+                    Add Note
+                </button>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h1>Undone list</h1>
+            <div class="col-md-3" ng-repeat="note in hc.notes track by note.id" ng-if="!note.isDone">
+                <div class="p-card">
+                    <div class="card-text">
+                        <h1 ng-bind="note.title"></h1>
+                        <h4 ng-bind="note.content"></h4>
+
+                        <div ng-if="note.remindAt">
+                            <div>Remind at: <span ng-bind="note.remindAt"></span></div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-primary" ng-click="hc.editNote($index)">
+                            Edit Note
+                        </button>
+
+                        <button type="button" class="btn btn-primary" ng-click="hc.removeNote($index)">
+                            Remove Note
+                        </button>
+
+                        <button type="button" class="btn btn-primary" ng-click="hc.setStatus($index, true)">
+                            Move to Done
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h1>Done list</h1>
+            <div class="col-md-3" ng-repeat="note in hc.notes track by note.title" ng-if="note.isDone">
+
+                <div class="p-card">
+                    <div class="card-text">
+                        <h1 ng-bind="note.title"></h1>
+                        <h4 ng-bind="note.content"></h4>
+
+                        <div ng-if="note.remindAt">
+                            <div>Remind at: <span ng-bind="note.remindAt"></span></div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-primary" ng-click="hc.editNote($index)">
+                            Edit Note
+                        </button>
+
+                        <button type="button" class="btn btn-primary" ng-click="hc.removeNote($index)">
+                            Remove Note
+                        </button>
+
+                        <button type="button" class="btn btn-primary" ng-click="hc.setStatus($index, false)">
+                            Move to Undone
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.5/ui-bootstrap-tpls.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

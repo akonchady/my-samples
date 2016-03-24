@@ -1,0 +1,56 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    font-family: 'Lato', sans-serif !important;
+    font-size: 20px !important;
+}
+
+body {
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/upfeathers.png");
+    background-origin: padding-box;
+    background-size: auto;
+    word-break: break-all;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.navbar-header {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {
+    float:none;
+}
+.note-modal input, .note-modal textarea {
+    width: 100%;
+}
+.top-buffer {
+    margin-top: 20px;
+}
+.p-card {
+    width: 242px;
+    padding: 5px;
+    height: 397px;
+    margin: 0 0 35px 25px;
+    border-radius: 3px;
+    border: 1px solid #BFBEBB;
+    display: inline-block;
+    box-shadow: 2px 2px 4px #BFBEBB;
+}

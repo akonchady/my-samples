@@ -1,0 +1,25 @@
+<div class="note-modal">
+    <div class="modal-header">
+        <h2 align="center">Add Note</h2>
+    </div>
+    <div class="modal-body clearfix">
+        <div class="col-md-12">
+            <div class="row">
+                <input type="text" ng-model="nc.note.title" placeholder="Add Note Title here"/>
+            </div>
+            <div class="row top-buffer">
+                <textarea ng-model="nc.note.content" id="" rows="4" placeholder="Content"></textarea>
+            </div>
+            <div>
+                <h4>Remind me at: </h4>
+                <uib-timepicker ng-model="nc.note.remindAt" hour-step="1" minute-step="1" show-meridian="true"></uib-timepicker>
+
+                <h4>Selected time: <span ng-bind="nc.note.remindAt"></span></h4>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="nc.saveNote()">Save</button>
+        <button class="btn btn-primary" type="button" ng-click="nc.cancelNote()">Cancel</button>
+    </div>
+</div>

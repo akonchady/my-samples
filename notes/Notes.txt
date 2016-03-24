@@ -34,7 +34,13 @@ fn.prototype.constructor = fn;
 
 Adarsh questions: 
 1. __proto v/s prototype in object, functions, etc.
-2. Debounce, throttle
+2. Debounce, throttle - https://davidwalsh.name/javascript-debounce-function
+    Debounce - Function will be called when it stops being called for 'delay' milliseconds
+                Eg: User types -> debounce fn called for each keystroke ->
+                            -> Actual fn will be called when user stops typing for 'delay' ms.
+    Throttle - Function will be called only after 'delay' milliseconds
+                Eg: User scrolls down the page. Function to repaint screen will be called every 300ms.
+                
 3. Promises in JS
 4. Jquery - interview qns... and important concepts
 5. Using 'map', filter function in js
@@ -244,7 +250,7 @@ delete('d'); // prints 'd'
 
 delete has effect only on object properties
 
-MAKEMYTRIP
+MAKEMYTRIP MYGOLA
 ----------------------------------------
 1.
 var foo = {
@@ -265,6 +271,12 @@ var foo = {
     https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 
 3.
+
+AMAZON
+-----------------------------------------
+1. Disadvantages of jsonp, cors
+    Possibly send dangerous data? How that would affect the server side?
+2.
 
 Notes :
 1. Performance improvements
