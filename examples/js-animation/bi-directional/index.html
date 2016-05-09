@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Animation</title>
+
+</head>
+<body>
+    <div id="box" style="width: 200px; height: 200px;background-color: red;"></div>
+
+    <script src="functions.js"></script>
+    <script>
+        var box = document.getElementById('box');
+
+        addEvent(box, 'click', function() {
+            moveDiv(box, 250, 1000); // Move 'box' by '250px' in 1000 milliseconds
+        });
+    </script>
+</body>
+</html>

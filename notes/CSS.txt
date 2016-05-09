@@ -111,6 +111,10 @@ CSS Pseudo-classes
         :valid	input:valid	Selects all <input> elements with a valid value
         :visited	a:visited	Selects all visited links
 
+        :nth-of-type(2n+3) -> Selects every 2nd instance of element starting from (and including) the 3rd instance.
+
+        Refer: http://flukeout.github.io/
+
 
 CSS Pseudo-Elements?
     - A CSS pseudo-element is used to style specified parts of an element.
@@ -170,7 +174,7 @@ Match CSS selectors
     * div p - Selects all <p> elements that are anywhere inside a <div> element
     * div > p - Selects all <p> elements where the immediate parent is a <div> element
     * div + p - Selects all <p> elements that are placed immediately after a <div> element
-    * div ~ p - Selects all <p> elements that are anywhere preceded by a <div> element
+    * div ~ p - Selects all <p> elements that are to the right of any <div>
 
 
 CSS units for expressing length

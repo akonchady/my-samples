@@ -38,9 +38,62 @@ Adarsh questions:
     Debounce - Function will be called when it stops being called for 'delay' milliseconds
                 Eg: User types -> debounce fn called for each keystroke ->
                             -> Actual fn will be called when user stops typing for 'delay' ms.
+               Refer: https://davidwalsh.name/javascript-debounce-function
+
+               Simple version:
+                    function debounce(fn, wait) {
+                    	var timeout = null;
+
+                    	return function() {
+                    		var context = this, args = arguments;
+                    		function later() {
+                    			timeout = null;
+
+                    			fn.apply(context, args);
+                    		}
+
+                    		clearTimeout(timeout);
+                    		setTimeout(later, wait);
+                    	}
+                    }
+
+                    var myEfficientFn = debounce(function() {
+                    	// All the taxing stuff you do
+                    }, 250);
+
+                    window.addEventListener('resize', myEfficientFn);
+
     Throttle - Function will be called only after 'delay' milliseconds
                 Eg: User scrolls down the page. Function to repaint screen will be called every 300ms.
-                
+
+                Refer: https://remysharp.com/2010/07/21/throttling-function-calls
+
+                Simple version:
+
+                    function throttle(fn, threshold, scope) {
+                    	var timeout = null, last;
+                    	threshold = threshold || 250;
+
+                    	return function() {
+                    		var context = scope || this, args = arguments;
+
+                    		var now = +new Date;
+
+                    		if(last && now < (last + threshold)) {
+                    			clearTimeout(timeout);
+
+                    			timeout = setTimeout(function() {
+                    				last = now;
+                    			    fn.apply(context, args);
+                    			}, threshold);
+                    		}
+                    		else {
+                    			last = now;
+                    			fn.apply(context, args);
+                    		}
+                    	}
+                    }
+
 3. Promises in JS
 4. Jquery - interview qns... and important concepts
 5. Using 'map', filter function in js
@@ -60,7 +113,7 @@ function cloneObject(obj) {
         return obj;
     }
 
-    var temp = obj.constructor(); // give temp the original obj's constructor
+    var temp = obj.constructor(); // give temp the original obj's constructor OR write 'new obj.constructor'
     for (var key in obj) {
         temp[key] = cloneObject(obj[key]);
     }
@@ -133,6 +186,7 @@ https://adarshkonchady.wordpress.com/2016/03/18/problem-with-using-new-for-inher
    function abc() {
      if(!this instanceof abc) {
         // Write something here
+        return new abc();
      }
    }
 
@@ -170,7 +224,7 @@ Show with example...
 
 HTML/HTML5:
 1. geolocation,
-2. localStorage persists on window close?
+2. localStorage persists on window close? -> Yes
 3. Does label for work for input text field? Does click on label bring focus on textbox?
 
 
@@ -277,6 +331,19 @@ AMAZON
 1. Disadvantages of jsonp, cors
     Possibly send dangerous data? How that would affect the server side?
 2.
+
+ZALANDO
+-----------------------------------------
+1. Capitalize 3-character words in a string
+
+function capitalize3(str) {
+  return str.replace(/\w\S*/g, function(str) {
+    if(str.length === 3)
+        return str.toUpperCase();
+    else
+        return str;
+  });
+}
 
 Notes :
 1. Performance improvements
