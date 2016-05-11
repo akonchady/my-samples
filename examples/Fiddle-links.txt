@@ -1,0 +1,6 @@
+1. Navbar - Hide on scroll down, show on scroll up
+
+Reference: http://jsfiddle.net/mariusc23/s6mLJ/31/
+My code: https://jsfiddle.net/akonchady/4xbu12er/
+
+2.
