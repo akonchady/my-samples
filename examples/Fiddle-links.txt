@@ -3,4 +3,6 @@
 Reference: http://jsfiddle.net/mariusc23/s6mLJ/31/
 My code: https://jsfiddle.net/akonchady/4xbu12er/
 
-2.
+2. Move Elements On Page Scroll Using jQuery And CSS - Implement
+Reference 1: http://talkerscode.com/webtricks/move-elements-on-page-scroll-using-jquery-and-css.php
+
