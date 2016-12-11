@@ -1,0 +1,70 @@
+<!--
+Shadow DOM
+Reference: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
+Fiddle links:
+1. https://jsfiddle.net/akonchady/k1qyo05v/
+2.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<body>
+<hr>
+<template>
+    <img src="abc.jpg" alt="">
+</template>
+<hr>
+    <div id="nameTag">adarsh</div>
+    <template id="nameTagTemplate">
+        <style>
+            .outer {
+                border: 2px solid brown;
+                border-radius: 1em;
+                background: red;
+                font-size: 20pt;
+                width: 12em;
+                height: 7em;
+                text-align: center;
+            }
+            .boilerplate {
+                color: white;
+                font-family: sans-serif;
+                padding: 0.5em;
+            }
+            .name {
+                color: black;
+                background: white;
+                font-family: "Marker Felt", cursive;
+                font-size: 45pt;
+                padding-top: 0.2em;
+                overflow: hidden;
+            }
+        </style>
+        <div class="outer">
+            <div class="boilerplate">
+                Hi! My name is
+            </div>
+            <div class="name">
+                <content></content>
+            </div>
+        </div>
+        <input type="text" id="nameTagInput" />
+        <button id="update" onclick="updateName();">Update</button>
+    </template>
+
+    <script>
+        var shadow = document.getElementById('nameTag').createShadowRoot();
+        var template = document.getElementById('nameTagTemplate');
+        var clone = document.importNode(template.content, true);
+        shadow.appendChild(clone);
+
+        function updateName() {
+            document.querySelector('#nameTag').textContent = shadow.getElementById('nameTagInput').value;
+        }
+    </script>
+</body>
+</html>

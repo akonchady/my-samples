@@ -233,6 +233,7 @@ AngularJS:
 Eg: u have a list of 30 elements using ng-repeat.
 Filter using a search textbox so only 2 items displaying now..
 Problem: Display 2 as count....
+http://stackoverflow.com/a/19517533/802651
 
 2.
 Factory,service,provider - internal working ? what's the difference. and when to use what ?
@@ -242,7 +243,8 @@ Factory,service,provider - internal working ? what's the difference. and when to
 
 Interview questions links : 
 1. http://thatjsdude.com/interview/index.html
-2. https://github.com/h5bp/Front-end-Developer-Interview-Questions - 
+2. https://github.com/h5bp/Front-end-Developer-Interview-Questions -
+        qns with Answers: http://flowerszhong.github.io/
 3.
 
 TARGET:
@@ -337,13 +339,49 @@ ZALANDO
 1. Capitalize 3-character words in a string
 
 function capitalize3(str) {
-  return str.replace(/\w\S*/g, function(str) {
-    if(str.length === 3)
-        return str.toUpperCase();
+  return str.replace(/\w\S*/g, function(text) {
+    if(text.length === 3)
+        return text.toUpperCase();
     else
-        return str;
+        return text;
   });
 }
+
+2. Animate div: check fiddle
+
+2nd round:
+Maria
+1. How http works
+
+Coding:
+Filter a menu with submenus to any nested level...
+A: http://stackoverflow.com/questions/37340098/using-array-prototype-filter-to-filter-nested-children-objects
+
+Thomas
+1. JSONP v/s CORS.. when would you choose one over another with reasons?
+http://stackoverflow.com/questions/12296910/so-jsonp-or-cors
+    - jsonp can only be get
+    - cors wont work <=IE9
+
+2. 3 ES6 features.... that you like and that you dont like
+3. How to prevent CSS interference in a web app? ...
+        Answered creating scoping using SCSS..
+4. Shadow DOM? http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
+5. New features in es6 that you love:
+a. https://webkit.org/blog/6240/ecmascript-6-proper-tail-calls-in-webkit/
+
+
+Coding:
+Check balanced paranthesis:
+
+Andrey
+1. Tools used.. Have you used any transpilers? Not yet !!!!
+2. What gulp plugin you used to minify+concatenate?
+
+Coding:
+Animate a div..
+https://jsfiddle.net/akonchady/9w9c4t0o/
+
 
 Notes :
 1. Performance improvements
@@ -548,3 +586,23 @@ Note: Always use 'track by' for ng-options
 
 14.
 http://www.toptal.com/angular-js/top-18-most-common-angularjs-developer-mistakes
+
+15. Determine if element is in the visible viewport
+    function isInViewport(element) {
+      var rect = element.getBoundingClientRect();
+      var html = document.documentElement;
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || html.clientHeight) &&
+        rect.right <= (window.innerWidth || html.clientWidth)
+      );
+    }
+
+16.
+Reference: https://www.toptal.com/jquery/interview-questions
+(a) Returning false from a jQuery event handler is effectively the same as calling both preventDefault() and stopPropagation() on the passed jQuery event object.
+
+(b) Returning false from a regular JavaScript onclick event handler for an anchor tag prevents the browser from navigating to the link address and stops the event from propagating through the DOM.
+
+(c) Returning false from a regular JavaScript onclick event handler for a non-anchor tag (e.g., a div, button, etc.) has absolutely no effect.
