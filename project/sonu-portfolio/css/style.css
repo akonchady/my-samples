@@ -83,7 +83,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	outline-offset: none;
 }
 .section-title {
-	margin-bottom: 50px;
+	margin-bottom: 35px;
 }
 .btn-custom {
 	font-family: 'Montserrat', sans-serif;
@@ -142,7 +142,10 @@ header .intro-text {
 	padding: 40px 0 100px 0;
 }
 .categories {
-	margin-bottom: 80px;
+	margin-bottom: 50px;
+}
+ul.cat {
+	line-height: 4;
 }
 ul.cat li {
 	display: inline-block;
