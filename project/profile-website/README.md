@@ -9,3 +9,7 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-applica
 
 Enabling gzip on non-HTML files:
 https://www.digitalocean.com/community/tutorials/how-to-add-the-gzip-module-to-nginx-on-ubuntu-14-04
+
+Setting up multiple domains on same server with NGINX:
+https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-14-04-lts
+
