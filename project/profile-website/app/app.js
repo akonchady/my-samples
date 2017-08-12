@@ -1,10 +1,8 @@
 jQuery(document).ready(function ($) {
-    $(window).on('load', function () {
-        $('.skill-bar-inner').each(function () {
-            var itemWidth = $(this).data('level');
+    $('.skill-bar-inner').each(function () {
+      var itemWidth = $(this).data('level');
 
-            $(this).animate({width: itemWidth}, 800);
-        });
+      $(this).animate({width: itemWidth}, 800);
     });
 
     /* jQuery RSS - https://github.com/sdepold/jquery-rss */
