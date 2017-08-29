@@ -606,3 +606,6 @@ Reference: https://www.toptal.com/jquery/interview-questions
 (b) Returning false from a regular JavaScript onclick event handler for an anchor tag prevents the browser from navigating to the link address and stops the event from propagating through the DOM.
 
 (c) Returning false from a regular JavaScript onclick event handler for a non-anchor tag (e.g., a div, button, etc.) has absolutely no effect.
+
+17. What and how of web push(service workers)?
+https://dev.to/mansimarkaur/the-what-and-how-of-web-push
