@@ -17,6 +17,7 @@ Increase EC2 volume size:
 https://n2ws.com/how-to-guides/how-to-increase-the-size-of-an-aws-ebs-cloud-volume-attached-to-a-linux-machine.html
 
 CERTBOT MESSAGE:
+References: https://medium.freecodecamp.org/going-https-on-amazon-ec2-ubuntu-14-04-with-lets-encrypt-certbot-on-nginx-696770649e76
 Which names would you like to activate HTTPS for?
 -------------------------------------------------------------------------------
 1: adarshkonchady.com
