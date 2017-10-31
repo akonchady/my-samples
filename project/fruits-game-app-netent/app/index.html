@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Win app">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Web Application Manifest -->
+        <link rel="manifest" href="manifest.json">
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Simple Game App">
+        <meta name="theme-color" content="#303F9F">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Simple Game App">
+
+        <link rel="stylesheet" href="main.css">
+
+        <title>Simple Game App</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="center">Simple Game app</h1>
+        </header>
+        <div id="gameContainer"></div>
+        <img id="reloadGame" src="images/button.png" alt="Reload game" />
+
+        <script type="text/javascript" src="scripts/helper.js"></script>
+        <script type="module" src="scripts/main.js"></script>
+
+        <!-- For older browsers, get the ES5 version -->
+        <script nomodule src="scripts/main.es5.js"></script>
+    </body>
+</html>

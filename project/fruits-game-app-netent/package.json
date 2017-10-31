@@ -1,0 +1,21 @@
+{
+  "name": "code_assignment_gfw_v0.6.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/scripts/server.js & babel --presets es2015 app/scripts/main.js -o app/scripts/main.es5.js -s true -w & serve app/ --port 8081",
+    "build": "babel --presets es2015 app/scripts/main.js -o app/scripts/main.es5.js -s true",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "serve": "^6.3.1"
+  }
+}
