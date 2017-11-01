@@ -9,9 +9,8 @@ Required softwares: Node
 To run: 
 1. Go to the project's root folder in terminal/command prompt
 2. Run 'npm install'
-3. Go to the project's app/ folder
-4. Type 'npm start'
-5. Go to browser and hit 'http://localhost:8081'
+3. Type 'npm start'
+4. Go to browser and hit 'http://localhost:8081'
 
 You can add this app to home screen on mobile Chrome to make it launch in landscape mode.
 
