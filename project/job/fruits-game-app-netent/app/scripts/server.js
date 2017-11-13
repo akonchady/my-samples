@@ -9,7 +9,10 @@ const BONUS_VALUE = 7;
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
   res.header('Cache-Control', 'no-cache');
   next();
 });
@@ -18,8 +21,8 @@ app.get('/', function(req, res, next) {
   const response = {
     outcomes: []
   };
-  for(let i=0;i<GET_NUMBER_COUNT;i++) {
-    response.outcomes.push(getRandomInteger(MIN_VALUE, MAX_VALUE))
+  for (let i = 0; i < GET_NUMBER_COUNT; i++) {
+    response.outcomes.push(getRandomInteger(MIN_VALUE, MAX_VALUE));
   }
   const bonus = getRandomInteger(0, BONUS_PROBABILITY_COUNT);
   if (bonus === BONUS_VALUE) {
