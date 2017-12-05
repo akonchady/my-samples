@@ -8,6 +8,7 @@ var htmlmin = require('gulp-htmlmin');
 var runSequence = require('run-sequence');
 var del = require('del');
 var cache = require('gulp-cache');
+var workbox = require('workbox-build');
 
 gulp.task('clean:dist', function() {
     return del.sync('dist');
@@ -28,6 +29,11 @@ gulp.task('useref', function() {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('copyManifest', function () {
+  gulp.src('./app/manifest.json')
+    .pipe(gulp.dest('./dist/'));
+});
+
 gulp.task('minifyHtml', function() {
     return gulp.src('dist/*.html')
         .pipe(gulpIf('*.html', htmlmin({collapseWhitespace: true})))
@@ -42,8 +48,25 @@ gulp.task('images', function(){
         .pipe(gulp.dest('dist/images'))
 });
 
+var dist = './dist';
+gulp.task('generate-service-worker', () => {
+    return workbox.generateSW({
+    globDirectory: dist,
+    globPatterns: [
+      '**\/*.{html,js,jpg,css}'
+    ],
+    swDest: `${dist}/sw.js`,
+    clientsClaim: true,
+    skipWaiting: true
+  }).then(() => {
+    console.info('Service worker generation completed.');
+  }).catch((error) => {
+    console.warn('Service worker generation failed: ' + error);
+  });
+});
+
 gulp.task('default', function (callback) {
-    runSequence('clean:dist', ['images', 'useref'], 'minifyHtml',
+    runSequence('clean:dist', ['images', 'useref'], 'minifyHtml', 'copyManifest', 'generate-service-worker',
         callback
     );
 });

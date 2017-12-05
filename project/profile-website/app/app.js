@@ -34,3 +34,17 @@ jQuery(document).ready(function ($) {
         }
     );
 });
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').catch(function (error) {
+      console.log('warn', 'Service worker registration failed: ' + error);
+    });
+
+    navigator.serviceWorker.ready.then(function () {
+      console.log('info', 'The service worker is ready.')
+    });
+  });
+} else {
+  console.log('warn', 'Your browser does not support service workers.');
+}
