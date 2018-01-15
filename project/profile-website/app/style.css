@@ -177,6 +177,10 @@ h6 {
     width: 90%;
 }
 
+.see-more {
+    font-size: 18px;
+}
+
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
     .header {
