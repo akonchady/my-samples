@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
     $("#rss-feeds").rss(
 
         //RSS feeds link
-        "https://adarshkonchady.wordpress.com/feed/",
+        "https://medium.com/feed/akonchady",
 
         {
             // how many entries do you want?
