@@ -21,7 +21,7 @@ gulp.task('cache:clear', function (callback) {
 });
 
 gulp.task('useref', function() {
-    return gulp.src('app/*.html')
+    return gulp.src('app/**/*.html')
         .pipe(useref())
         .pipe(gulpIf('*.js', uglify()))
         // Minifies only if it's a CSS file
