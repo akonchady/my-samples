@@ -1,7 +1,0 @@
-{
-  "name": "Simple Game app",
-  "short_name": "Game app",
-  "start_url": "/index.html",
-  "display": "standalone",
-  "orientation": "landscape"
-}
