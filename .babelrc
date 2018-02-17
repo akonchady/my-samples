@@ -1,0 +1,24 @@
+{
+  "plugins": ["lodash"],
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "> 0.75% in US",
+            "last 4 versions",
+            "Android > 4.2",
+            "Firefox ESR",
+            "not ie <= 10"
+          ],
+          "uglify": true
+        },
+        "useBuiltIns": true,
+        "debug": false,
+        "modules": false
+      }
+    ],
+    "react"
+  ]
+}

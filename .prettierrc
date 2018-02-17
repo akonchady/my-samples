@@ -1,0 +1,4 @@
+# .prettierrc
+printWidth: 100
+singleQuote: true
+trailing-comma: es5
