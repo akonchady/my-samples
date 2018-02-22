@@ -24,6 +24,10 @@ module.exports = {
     }],
   },
   plugins: [
+    // new webpack.EnvironmentPlugin({
+    //   NODE_ENV: development ? 'development' : 'production',
+    //   DEBUG: false,
+    // }),
     new LodashModuleReplacementPlugin(),
     new UglifyJsPlugin(),
     new BundleAnalyzerPlugin(),

@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --open",
     "build": "NODE_ENV=production && webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write 'src/**/*.js'"
+    "format": "prettier --write 'src/**/*.js'",
+    "eslint": "eslint --ignore-path .gitignore --cache --cache-location=node_modules/.cache/eslint ."
   },
   "repository": {
     "type": "git",
