@@ -1,5 +1,5 @@
 {
-  "name": "hotel-waiter-app",
+  "name": "test-app",
   "version": "1.0.0",
   "description": "Hotel waiter app",
   "main": "index.js",
@@ -10,11 +10,8 @@
     "format": "prettier --write 'src/**/*.js'",
     "eslint": "eslint --ignore-path .gitignore --cache --cache-location=node_modules/.cache/eslint ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://akonchady@bitbucket.org/akonchady/my-samples.git"
-  },
-  "author": "",
+  "repository": "git+https://akonchady@bitbucket.org/akonchady/my-samples.git",
+  "author": "Adarsh Konchady <akonchady@gmail.com>",
   "license": "ISC",
   "homepage": "https://bitbucket.org/akonchady/my-samples#readme",
   "devDependencies": {
@@ -37,7 +34,6 @@
   },
   "dependencies": {
     "babel-preset-react": "^6.24.1",
-    "lodash-es": "^4.17.5",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
