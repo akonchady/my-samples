@@ -31,8 +31,9 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "@firebase/app": "^0.1.10",
+    "@firebase/database": "^0.1.11",
     "babel-preset-react": "^6.24.1",
-    "firebase": "^4.10.1",
     "firebase-tools": "^3.17.4",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
-import { database } from '../server/firebase';
+import { database } from '../firebase';
 import Header from './Header';
 
 class App extends Component {
