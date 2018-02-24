@@ -1,7 +1,7 @@
 {
   "name": "test-app",
   "version": "1.0.0",
-  "description": "Hotel waiter app",
+  "description": "Test app",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
@@ -10,10 +10,8 @@
     "format": "prettier --write 'src/**/*.js'",
     "eslint": "eslint --ignore-path .gitignore --cache --cache-location=node_modules/.cache/eslint ."
   },
-  "repository": "git+https://akonchady@bitbucket.org/akonchady/my-samples.git",
   "author": "Adarsh Konchady <akonchady@gmail.com>",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/akonchady/my-samples#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -40,5 +38,6 @@
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",
     "styled-components": "^3.1.6"
-  }
+  },
+  "repository": "git@github.com:akonchady/my-samples.git"
 }
