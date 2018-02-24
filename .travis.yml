@@ -4,4 +4,5 @@ node_js:
 
 script:
   - yarn
+  - yarn format
   - yarn eslint
