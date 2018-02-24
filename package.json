@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "babel-preset-react": "^6.24.1",
+    "firebase-tools": "^3.17.4",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
