@@ -4,8 +4,8 @@
   "description": "Test app",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "NODE_ENV=production && webpack",
+    "start": "webpack-dev-server --open --config webpack/webpack.dev.js",
+    "build": "webpack --config webpack/webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write 'src/**/*.js'",
     "eslint": "eslint --ignore-path .gitignore --cache --cache-location=node_modules/.cache/eslint ."
@@ -32,12 +32,14 @@
   },
   "dependencies": {
     "babel-preset-react": "^6.24.1",
+    "firebase": "^4.10.1",
     "firebase-tools": "^3.17.4",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",
-    "styled-components": "^3.1.6"
+    "styled-components": "^3.1.6",
+    "webpack-merge": "^4.1.2"
   },
   "repository": "git@github.com:akonchady/my-samples.git"
 }
