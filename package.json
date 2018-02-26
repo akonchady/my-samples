@@ -2,20 +2,21 @@
   "name": "test-app",
   "version": "1.0.0",
   "description": "Test app",
-  "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack/webpack.dev.js",
-    "build": "webpack --config webpack/webpack.prod.js",
+    "start": "webpack-dev-server --open --mode development --config webpack/webpack.dev.js",
+    "build": "webpack --mode production --config webpack/webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write 'src/**/*.js'",
-    "eslint": "eslint --ignore-path .gitignore --cache --cache-location=node_modules/.cache/eslint ."
+    "eslint": "eslint --ignore-path .gitignore --cache --cache-location=node_modules/.cache/eslint src/**/*.js"
   },
   "author": "Adarsh Konchady <akonchady@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.2",
     "babel-plugin-lodash": "^3.3.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
@@ -26,9 +27,10 @@
     "lodash-webpack-plugin": "^0.11.4",
     "prettier": "1.10.2",
     "uglifyjs-webpack-plugin": "^1.1.8",
-    "webpack": "^3.11.0",
+    "webpack": "^4.0.0",
     "webpack-bundle-analyzer": "^2.10.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-cli": "^2.0.9",
+    "webpack-dev-server": "^3.0.0"
   },
   "dependencies": {
     "@firebase/app": "^0.1.10",

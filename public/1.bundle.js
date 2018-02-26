@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{295:function(e,a,t){"use strict";t.r(a),t.d(a,"database",function(){return s});var c=t(205);t(283),c.default.initializeApp({apiKey:"AIzaSyB07D3cS0YmME6c1hJjHc-V2pJn8VzLw_s",authDomain:"react-firebase-64fce.firebaseapp.com",databaseURL:"https://react-firebase-64fce.firebaseio.com",projectId:"react-firebase-64fce",storageBucket:"react-firebase-64fce.appspot.com",messagingSenderId:"683249994387"}),a.default=c.default;var s=c.default.database()}}]);
+//# sourceMappingURL=1.bundle.js.map

@@ -3,14 +3,14 @@ const path = require('path');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './client/index.js',
+  entry: './src/client/index.js',
   context: path.resolve(__dirname, '..'),
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, '../public'),
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.js?$/,
       loader: 'babel-loader',
       exclude: /node_modules/,
