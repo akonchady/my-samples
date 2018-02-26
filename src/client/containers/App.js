@@ -14,9 +14,9 @@ class App extends Component {
 
   componentDidMount() {
     // Webpack magic comment to generate the chunk name
-    import(/* webpackChunkName: "firebase" */ '../firebase').then((module) => {
+    import(/* webpackChunkName: "firebase" */ '../firebase').then(module => {
       const { database } = module;
-      database.ref().on('value', (snapshot) => {
+      database.ref().on('value', snapshot => {
         this.setState({
           data: JSON.stringify(snapshot.val()),
         });
@@ -32,7 +32,7 @@ class App extends Component {
         <Fragment>
           <Header />
           <RaisedButton label="Default" />
-          { data }
+          {data}
         </Fragment>
       </MuiThemeProvider>
     );
