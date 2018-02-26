@@ -8,6 +8,7 @@ rules:
   import/no-extraneous-dependencies: ["error", {
     "webpack/**"
   }]
+  arrow-parens: 0
 
 parser: "babel-eslint"
 parserOptions:
