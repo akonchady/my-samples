@@ -1,5 +1,4 @@
 .idea/
-public/bundle.js
-public/bundle.js.map
+public/
 node_modules/
 firebase-debug.log
