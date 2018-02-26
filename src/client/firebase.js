@@ -7,7 +7,7 @@ const config = {
   databaseURL: 'https://react-firebase-64fce.firebaseio.com',
   projectId: 'react-firebase-64fce',
   storageBucket: 'react-firebase-64fce.appspot.com',
-  messagingSenderId: '683249994387',
+  messagingSenderId: '683249994387'
 };
 firebase.initializeApp(config);
 

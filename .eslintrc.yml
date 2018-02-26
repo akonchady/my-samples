@@ -9,6 +9,7 @@ rules:
     "webpack/**"
   }]
   arrow-parens: 0
+  comma-dangle: 0
 
 parser: "babel-eslint"
 parserOptions:

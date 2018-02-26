@@ -7,13 +7,16 @@ module.exports = {
   context: path.resolve(__dirname, '..'),
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../public'),
+    path: path.resolve(__dirname, '../public')
   },
   module: {
-    rules: [{
-      test: /\.js?$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/,
-    }],
-  },
+    rules: [
+      {
+        test: /\.js?$/,
+        include: path.resolve(__dirname, 'src'),
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      }
+    ]
+  }
 };

@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null,
+      data: null
     };
   }
 
@@ -18,7 +18,7 @@ class App extends Component {
       const { database } = module;
       database.ref().on('value', snapshot => {
         this.setState({
-          data: JSON.stringify(snapshot.val()),
+          data: JSON.stringify(snapshot.val())
         });
       });
     });

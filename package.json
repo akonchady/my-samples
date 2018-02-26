@@ -7,7 +7,9 @@
     "build": "webpack --mode production --config webpack/webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write 'src/**/*.js'",
-    "eslint": "eslint --ignore-path .gitignore --cache --cache-location=node_modules/.cache/eslint src/**/*.js"
+    "eslint":
+      "eslint --ignore-path .gitignore --cache --cache-location=node_modules/.cache/eslint src/**/*.js",
+    "precommit": "pretty-quick --staged"
   },
   "author": "Adarsh Konchady <akonchady@gmail.com>",
   "license": "ISC",
@@ -23,9 +25,11 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
+    "husky": "^0.14.3",
     "js-yaml": "^3.10.0",
     "lodash-webpack-plugin": "^0.11.4",
     "prettier": "1.10.2",
+    "pretty-quick": "^1.4.1",
     "uglifyjs-webpack-plugin": "^1.1.8",
     "webpack": "^4.0.0",
     "webpack-bundle-analyzer": "^2.10.0",
