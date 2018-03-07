@@ -5,7 +5,7 @@ class TablesContainer extends Component {
   static renderTable() {
     return (
       <div style={{ flex: '1 1 0' }}>
-        <img src="client/images/icons/table.png" alt="" />
+        <img src="client/images/icons/table.png" alt="Table 1" />
         Table 1
       </div>
     );
