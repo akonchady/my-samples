@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
-// import { TABLE_COUNT } from '../../constants/tables';
+import { TABLE_COUNT } from '../../constants/tables';
 
 class TablesContainer extends Component {
   static renderTable() {
     return (
-      <div style={{ flex: '1 1 0' }}>
+      <div style={{ flex: '1 1 100%' }}>
         <img src="client/images/icons/table.png" alt="Table 1" />
         Table 1
       </div>
     );
+  }
+
+  static renderTableLayout() {
+    const collection = [];
+    for (let i = 0; i < TABLE_COUNT; i += 1) {
+      collection.push(TablesContainer.renderTable());
+    }
+    return collection;
   }
 
   constructor(props) {
@@ -17,7 +25,7 @@ class TablesContainer extends Component {
   }
 
   render() {
-    return <div style={{ display: 'flex' }}>{TablesContainer.renderTable()}</div>;
+    return <div style={{ display: 'flex' }}>{TablesContainer.renderTableLayout()}</div>;
   }
 }
 
