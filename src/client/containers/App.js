@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Header from './Header';
+import { Route } from 'react-router-dom';
+
+import Home from './Home';
+import CategoryContainer from './CategoryContainer';
 
 class App extends Component {
   constructor(props) {
@@ -25,8 +28,8 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <Fragment>
-          <Header />
-          {/* <RaisedButton label="Default" /> */}
+          <Route path="/" component={Home} />
+          <Route path="/categories" component={CategoryContainer} />
         </Fragment>
       </MuiThemeProvider>
     );

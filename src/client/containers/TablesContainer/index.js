@@ -1,31 +1,35 @@
 import React, { Component } from 'react';
+import { uniqueId } from 'lodash';
+
 import { TABLE_COUNT } from '../../constants/tables';
+import { TableStyled, TablesContainerStyled, TableTextStyled } from './styles';
 
 class TablesContainer extends Component {
-  static renderTable() {
-    return (
-      <div style={{ flex: '1 1 100%' }}>
-        <img src="client/images/icons/table.png" alt="Table 1" />
-        Table 1
-      </div>
-    );
-  }
-
-  static renderTableLayout() {
-    const collection = [];
-    for (let i = 0; i < TABLE_COUNT; i += 1) {
-      collection.push(TablesContainer.renderTable());
-    }
-    return collection;
-  }
-
   constructor(props) {
     super(props);
     this.state = {};
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  renderTable(index) {
+    return (
+      <TableStyled key={uniqueId('table')}>
+        <img src="client/images/icons/table2.png" alt={`Table ${index}`} />
+        <TableTextStyled className="center">Table {index}</TableTextStyled>
+      </TableStyled>
+    );
+  }
+
+  renderTableLayout() {
+    const collection = [];
+    for (let i = 1; i <= TABLE_COUNT; i += 1) {
+      collection.push(this.renderTable(i));
+    }
+    return collection;
+  }
+
   render() {
-    return <div style={{ display: 'flex' }}>{TablesContainer.renderTableLayout()}</div>;
+    return <TablesContainerStyled>{this.renderTableLayout()}</TablesContainerStyled>;
   }
 }
 

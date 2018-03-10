@@ -7,7 +7,7 @@ function handleActive(tab) {
   alert(`A tab with this route property ${tab.props['data-route']} was activated.`); // eslint-disable-line
 }
 
-class Header extends PureComponent {
+class Home extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {};
@@ -18,7 +18,12 @@ class Header extends PureComponent {
       <Tabs>
         <Tab label="Tables">
           <div>
-            <Headline>Tab One</Headline>
+            <Headline>
+              Hello! Start selecting tables{' '}
+              <span role="img" aria-label="smiley">
+                😀
+              </span>
+            </Headline>
             <TablesContainer />
           </div>
         </Tab>
@@ -39,4 +44,4 @@ class Header extends PureComponent {
   }
 }
 
-export default Header;
+export default Home;

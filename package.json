@@ -41,10 +41,12 @@
     "@firebase/app": "^0.1.10",
     "@firebase/database": "^0.1.11",
     "babel-preset-react": "^6.24.1",
+    "lodash": "^4.17.5",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "styled-components": "^3.1.6"
   },
   "repository": "git@github.com:akonchady/my-samples.git"
