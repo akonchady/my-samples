@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { uniqueId } from 'lodash';
+import { Link } from 'react-router-dom';
 
 import { TABLE_COUNT } from '../../constants/tables';
 import { TableStyled, TablesContainerStyled, TableTextStyled } from './styles';
@@ -13,10 +14,12 @@ class TablesContainer extends Component {
   // eslint-disable-next-line class-methods-use-this
   renderTable(index) {
     return (
-      <TableStyled key={uniqueId('table')}>
-        <img src="client/images/icons/table2.png" alt={`Table ${index}`} />
-        <TableTextStyled className="center">Table {index}</TableTextStyled>
-      </TableStyled>
+      <Link to="/categories" key={uniqueId('table')}>
+        <TableStyled>
+          <img src="client/images/icons/table2.png" alt={`Table ${index}`} />
+          <TableTextStyled className="center">Table {index}</TableTextStyled>
+        </TableStyled>
+      </Link>
     );
   }
 

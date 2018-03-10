@@ -28,7 +28,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <Fragment>
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/categories" component={CategoryContainer} />
         </Fragment>
       </MuiThemeProvider>
