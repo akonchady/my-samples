@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write 'src/**/*.js'",
     "eslint":
-      "eslint --ignore-path .gitignore --cache --cache-location=node_modules/.cache/eslint src/**/*.js",
+      "eslint --ignore-path .gitignore --cache --cache-location=node_modules/.cache/eslint 'src/**/*.js'",
     "precommit": "pretty-quick --staged"
   },
   "author": "Adarsh Konchady <akonchady@gmail.com>",
@@ -48,6 +48,7 @@
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-styled-flexboxgrid": "^2.2.0",
     "styled-components": "^3.1.6"
   },
   "repository": "git@github.com:akonchady/my-samples.git"

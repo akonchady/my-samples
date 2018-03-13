@@ -15,6 +15,7 @@ rules:
     "specialLink": [ "hrefLeft", "hrefRight" ],
     "aspects": [ "invalidHref", "preferButton" ]
   }]
+  react/require-default-props: 0
 
 parser: "babel-eslint"
 parserOptions:
