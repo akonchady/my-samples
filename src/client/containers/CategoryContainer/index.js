@@ -16,11 +16,6 @@ class CategoryContainer extends Component {
     this.state = {
       orders: []
     };
-    this.styles = {
-      title: {
-        cursor: 'pointer'
-      }
-    };
     this.handleClick = this.handleClick.bind(this);
     this.handleMenuItemClick = this.handleMenuItemClick.bind(this);
   }
