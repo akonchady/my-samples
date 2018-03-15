@@ -3,7 +3,7 @@ import { AppBar, IconButton } from 'material-ui';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'react-styled-flexboxgrid';
-import { uniqueId } from 'lodash';
+import { uniqueId, map } from 'lodash';
 
 import { StyledCategoryOrders, StyledArrowBack, StyledTitle } from './styles';
 import CategoriesFixture from '../../fixtures/categories';
@@ -27,8 +27,23 @@ class CategoryContainer extends Component {
 
   handleMenuItemClick(menuItem) {
     const { orders } = this.state;
-    const newOrders = [...orders];
-    newOrders.push(menuItem);
+    let isMatchedOrder = false;
+    const newOrders = map(orders, order => {
+      const newOrder = { ...order };
+      if (menuItem.id === order.id) {
+        newOrder.count = (newOrder.count || 0) + 1;
+        isMatchedOrder = true;
+        return newOrder;
+      }
+      return order;
+    });
+    if (!isMatchedOrder) {
+      newOrders.push({
+        count: 1,
+        ...menuItem
+      });
+    }
+    // Update DB here
     this.setState({
       orders: newOrders
     });

@@ -40,6 +40,7 @@
   "dependencies": {
     "@firebase/app": "^0.1.10",
     "@firebase/database": "^0.1.11",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1",
     "lodash": "^4.17.5",
     "material-ui": "^0.20.0",

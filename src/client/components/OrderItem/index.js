@@ -17,7 +17,11 @@ class OrderItem extends PureComponent {
 
   render() {
     const { orderItem } = this.props;
-    return <Chip onClick={this.handleClick}>{orderItem.name}</Chip>;
+    return (
+      <Chip onClick={this.handleClick}>
+        {orderItem.name} {orderItem.count}
+      </Chip>
+    );
   }
 }
 
