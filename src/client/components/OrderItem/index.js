@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Chip } from 'material-ui';
+import { Card, CardText } from 'material-ui';
 
 class OrderItem extends PureComponent {
   constructor(props) {
@@ -18,9 +18,11 @@ class OrderItem extends PureComponent {
   render() {
     const { orderItem } = this.props;
     return (
-      <Chip onClick={this.handleClick}>
-        {orderItem.name} {orderItem.count}
-      </Chip>
+      <Card onClick={this.handleClick}>
+        <CardText>
+          {orderItem.name} {orderItem.count}
+        </CardText>
+      </Card>
     );
   }
 }

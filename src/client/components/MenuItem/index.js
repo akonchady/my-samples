@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Chip } from 'material-ui';
+import { Card, CardText } from 'material-ui';
 
 class MenuItem extends PureComponent {
   constructor(props) {
@@ -17,7 +17,11 @@ class MenuItem extends PureComponent {
 
   render() {
     const { menuItem } = this.props;
-    return <Chip onClick={this.handleClick}>{menuItem.name}</Chip>;
+    return (
+      <Card onClick={this.handleClick}>
+        <CardText>{menuItem.name}</CardText>
+      </Card>
+    );
   }
 }
 
