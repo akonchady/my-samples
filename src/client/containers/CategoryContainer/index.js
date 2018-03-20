@@ -51,6 +51,7 @@ class CategoryContainer extends Component {
 
   render() {
     const { orders } = this.state;
+    const { Fragment } = React;
     return (
       <div>
         <AppBar
@@ -86,12 +87,15 @@ class CategoryContainer extends Component {
               />
             </Col>
             <Col xs={6}>
-              {orders && (
-                <ItemList
-                  list={orders}
-                  render={order => <OrderItem key={uniqueId()} orderItem={order} />}
-                />
-              )}
+              {orders.length ? (
+                <Fragment>
+                  <ItemList
+                    list={orders}
+                    render={order => <OrderItem key={uniqueId()} orderItem={order} />}
+                  />
+                  {/* More content to come here */}
+                </Fragment>
+              ) : null}
             </Col>
           </Row>
         </StyledCategoryOrders>
