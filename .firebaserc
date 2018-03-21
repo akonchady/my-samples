@@ -1,6 +1,7 @@
 {
   "projects": {
     "react-firebase": "react-firebase-64fce",
-    "default": "react-firebase-64fce"
+    "default": "react-firebase-64fce",
+    "waiter-app": "react-firebase-64fce"
   }
 }
