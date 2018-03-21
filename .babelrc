@@ -1,5 +1,17 @@
 {
-  "plugins": ["lodash", "syntax-dynamic-import", "transform-object-rest-spread"],
+  "plugins": [
+    "lodash",
+    "syntax-dynamic-import",
+    "transform-object-rest-spread",
+    [
+      "import",
+      {
+        "libraryName": "material-ui",
+        "libraryDirectory": "",
+        "camel2DashComponentName": false
+      }
+    ]
+  ],
   "presets": [
     [
       "env",

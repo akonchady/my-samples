@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardText } from 'material-ui';
+import { Card, CardText } from 'material-ui/Card';
 
 class MenuItem extends PureComponent {
   constructor(props) {
