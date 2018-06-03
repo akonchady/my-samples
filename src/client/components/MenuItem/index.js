@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardText } from 'material-ui/Card';
+import { Card, CardContent } from '@material-ui/core';
 
 class MenuItem extends PureComponent {
   constructor(props) {
@@ -19,7 +19,7 @@ class MenuItem extends PureComponent {
     const { menuItem } = this.props;
     return (
       <Card onClick={this.handleClick}>
-        <CardText>{menuItem.name}</CardText>
+        <CardContent>{menuItem.name}</CardContent>
       </Card>
     );
   }

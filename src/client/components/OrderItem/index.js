@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardText } from 'material-ui/Card';
+import { Card, CardContent } from '@material-ui/core';
 
 class OrderItem extends PureComponent {
   constructor(props) {
@@ -19,9 +19,9 @@ class OrderItem extends PureComponent {
     const { orderItem } = this.props;
     return (
       <Card onClick={this.handleClick}>
-        <CardText>
+        <CardContent>
           {orderItem.name} {orderItem.count}
-        </CardText>
+        </CardContent>
       </Card>
     );
   }

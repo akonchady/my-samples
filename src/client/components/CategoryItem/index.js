@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Chip } from 'material-ui';
+import { Chip } from '@material-ui/core';
 
 class CategoryItem extends PureComponent {
   constructor(props) {
@@ -17,7 +17,7 @@ class CategoryItem extends PureComponent {
 
   render() {
     const { onClick, category } = this.props;
-    return <Chip onClick={onClick}>{category.name}</Chip>;
+    return <Chip onClick={onClick} label={category.name} />;
   }
 }
 

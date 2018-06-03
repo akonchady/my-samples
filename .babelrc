@@ -6,11 +6,12 @@
     [
       "import",
       {
-        "libraryName": "material-ui",
+        "libraryName": "@material-ui/core",
         "libraryDirectory": "",
         "camel2DashComponentName": false
       }
-    ]
+    ],
+    "transform-class-properties"
   ],
   "presets": [
     [

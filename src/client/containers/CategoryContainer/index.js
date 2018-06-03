@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppBar, IconButton } from 'material-ui';
+import { AppBar, IconButton } from '@material-ui/core';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'react-styled-flexboxgrid';
