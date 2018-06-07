@@ -7,3 +7,6 @@ Running Firebase:
 
 DB Link:
 https://dbdesigner.net/designer/schema/156200
+
+References:
+https://tylermcginnis.com/react-router-server-rendering/
